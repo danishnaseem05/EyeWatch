@@ -1,0 +1,1731 @@
+{
+  "data": {
+    "files": [
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.21.44.01.mp4",
+          "size": 42626543,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 18.21.44.01.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.21.44.01.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.22.01.02.mp4",
+          "size": 17593370,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 18.22.01.02.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.22.01.02.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.22.09.03.mp4",
+          "size": 18947390,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 18.22.09.03.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.22.09.03.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.22.57.04.mp4",
+          "size": 35320357,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 18.22.57.04.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.22.57.04.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.23.14.05.mp4",
+          "size": 35583076,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 18.23.14.05.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.23.14.05.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.24.32.06.mp4",
+          "size": 69952707,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 18.24.32.06.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.24.32.06.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.25.17.07.mp4",
+          "size": 54944540,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 18.25.17.07.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.25.17.07.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.25.44.08.mp4",
+          "size": 37020399,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 18.25.44.08.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.25.44.08.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.27.33.09.mp4",
+          "size": 58373371,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 18.27.33.09.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.27.33.09.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.27.33.10.png",
+          "size": 2529293,
+          "type": "PNG"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 18.27.33.10.png",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.27.33.10.png"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.36.30.12.mp4",
+          "size": 41017569,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 18.36.30.12.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.36.30.12.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.38.29.13.mp4",
+          "size": 35733037,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 18.38.29.13.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.38.29.13.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.39.30.14.mp4",
+          "size": 28111540,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 18.39.30.14.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.39.30.14.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.39.57.15.mp4",
+          "size": 43779642,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 18.39.57.15.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.39.57.15.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.43.44.16.mp4",
+          "size": 41848028,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 18.43.44.16.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.43.44.16.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.44.42.17.mp4",
+          "size": 30338594,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 18.44.42.17.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.44.42.17.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.49.48.19.mp4",
+          "size": 31910056,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 18.49.48.19.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 18.49.48.19.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.00.25.22.mp4",
+          "size": 53118957,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.00.25.22.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.00.25.22.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.01.55.23.mp4",
+          "size": 15453042,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.01.55.23.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.01.55.23.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.02.37.24.mp4",
+          "size": 30970333,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.02.37.24.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.02.37.24.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.04.58.25.mp4",
+          "size": 42714929,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.04.58.25.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.04.58.25.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.07.53.26.mp4",
+          "size": 28072293,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.07.53.26.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.07.53.26.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.08.10.27.mp4",
+          "size": 31191539,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.08.10.27.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.08.10.27.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.08.40.28.mp4",
+          "size": 34022794,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.08.40.28.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.08.40.28.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.09.48.29.mp4",
+          "size": 46383104,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.09.48.29.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.09.48.29.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.10.24.30.mp4",
+          "size": 9361996,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.10.24.30.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.10.24.30.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.10.44.31.mp4",
+          "size": 11884451,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.10.44.31.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.10.44.31.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.11.13.32.mp4",
+          "size": 22706601,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.11.13.32.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.11.13.32.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.11.25.33.mp4",
+          "size": 15922135,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.11.25.33.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.11.25.33.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.35.34.01.mp4",
+          "size": 43419034,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.35.34.01.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.35.34.01.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.47.13.05.mp4",
+          "size": 35937434,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.47.13.05.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.47.13.05.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.47.45.06.mp4",
+          "size": 38693416,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.47.45.06.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.47.45.06.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.49.35.07.mp4",
+          "size": 29221380,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.49.35.07.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.49.35.07.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.50.17.08.mp4",
+          "size": 23172999,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.50.17.08.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.50.17.08.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.53.14.09.mp4",
+          "size": 43825664,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.53.14.09.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.53.14.09.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.54.09.10.mp4",
+          "size": 38938533,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.54.09.10.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.54.09.10.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.54.27.11.mp4",
+          "size": 28494779,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.54.27.11.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.54.27.11.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.54.54.12.mp4",
+          "size": 47288084,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.54.54.12.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.54.54.12.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.56.44.13.mp4",
+          "size": 51080562,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.56.44.13.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.56.44.13.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.57.04.14.mp4",
+          "size": 36081160,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.57.04.14.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.57.04.14.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.58.34.15.mp4",
+          "size": 38725509,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.06 - 19.58.34.15.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.06 - 19.58.34.15.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.07 - 19.04.07.01.mp4",
+          "size": 43195609,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.07 - 19.04.07.01.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.07 - 19.04.07.01.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.07 - 19.07.33.02.mp4",
+          "size": 45973053,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.07 - 19.07.33.02.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.07 - 19.07.33.02.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.07 - 19.07.54.03.mp4",
+          "size": 38589815,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.07 - 19.07.54.03.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.07 - 19.07.54.03.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.07 - 19.08.25.04.mp4",
+          "size": 45686231,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.07 - 19.08.25.04.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.07 - 19.08.25.04.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.07 - 19.08.51.05.mp4",
+          "size": 40089284,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.07 - 19.08.51.05.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.07 - 19.08.51.05.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.07 - 19.10.01.06.mp4",
+          "size": 24740375,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.07 - 19.10.01.06.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.07 - 19.10.01.06.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.07 - 19.10.17.07.mp4",
+          "size": 21609509,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.07 - 19.10.17.07.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.07 - 19.10.17.07.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.07 - 19.10.17.08.png",
+          "size": 2737091,
+          "type": "PNG"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.07 - 19.10.17.08.png",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.07 - 19.10.17.08.png"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.26 - 01.57.51.01.mp4",
+          "size": 6826849,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.26 - 01.57.51.01.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.26 - 01.57.51.01.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.26 - 01.58.33.02.mp4",
+          "size": 8253428,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.26 - 01.58.33.02.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.26 - 01.58.33.02.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.26 - 02.00.25.03.mp4",
+          "size": 5615486,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.26 - 02.00.25.03.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.26 - 02.00.25.03.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.26 - 02.01.20.04.mp4",
+          "size": 4866230,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.26 - 02.01.20.04.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.26 - 02.01.20.04.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.26 - 02.01.45.05.mp4",
+          "size": 7408119,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.26 - 02.01.45.05.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.26 - 02.01.45.05.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.26 - 02.04.30.06.mp4",
+          "size": 4455188,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.26 - 02.04.30.06.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.26 - 02.04.30.06.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.26 - 02.05.09.07.mp4",
+          "size": 4617670,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.26 - 02.05.09.07.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.26 - 02.05.09.07.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.26 - 02.06.14.08.mp4",
+          "size": 6278959,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.26 - 02.06.14.08.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.26 - 02.06.14.08.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.26 - 02.06.14.09.png",
+          "size": 588883,
+          "type": "PNG"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.09.26 - 02.06.14.09.png",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.09.26 - 02.06.14.09.png"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.16.45.01.mp4",
+          "size": 51581440,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 00.16.45.01.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.16.45.01.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.18.29.02.mp4",
+          "size": 40576927,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 00.18.29.02.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.18.29.02.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.18.46.03.mp4",
+          "size": 38934342,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 00.18.46.03.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.18.46.03.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.21.48.04.mp4",
+          "size": 36846421,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 00.21.48.04.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.21.48.04.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.22.11.05.mp4",
+          "size": 50436873,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 00.22.11.05.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.22.11.05.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.22.41.06.mp4",
+          "size": 41053835,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 00.22.41.06.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.22.41.06.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.23.43.07.mp4",
+          "size": 46461747,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 00.23.43.07.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.23.43.07.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.23.43.08.png",
+          "size": 2540826,
+          "type": "PNG"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 00.23.43.08.png",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.23.43.08.png"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.26.10.10.mp4",
+          "size": 49809864,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 00.26.10.10.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.26.10.10.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.32.36.11.mp4",
+          "size": 47071877,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 00.32.36.11.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.32.36.11.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.35.29.12.mp4",
+          "size": 36826924,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 00.35.29.12.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.35.29.12.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.47.39.14.mp4",
+          "size": 38273795,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 00.47.39.14.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.47.39.14.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.48.25.15.mp4",
+          "size": 46264036,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 00.48.25.15.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.48.25.15.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.48.50.16.mp4",
+          "size": 46082173,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 00.48.50.16.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.48.50.16.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.50.10.17.mp4",
+          "size": 43306173,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 00.50.10.17.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.50.10.17.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.50.31.18.mp4",
+          "size": 41704965,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 00.50.31.18.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.50.31.18.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.50.31.19.png",
+          "size": 3111560,
+          "type": "PNG"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 00.50.31.19.png",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.50.31.19.png"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.59.03.21.mp4",
+          "size": 41737401,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 00.59.03.21.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 00.59.03.21.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 01.00.12.22.mp4",
+          "size": 25107527,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 01.00.12.22.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 01.00.12.22.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 01.00.43.23.mp4",
+          "size": 34723942,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 01.00.43.23.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 01.00.43.23.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 01.01.26.24.mp4",
+          "size": 23188894,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 01.01.26.24.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 01.01.26.24.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 01.01.59.25.mp4",
+          "size": 38826359,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 01.01.59.25.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 01.01.59.25.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 01.02.24.26.mp4",
+          "size": 42141401,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 01.02.24.26.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 01.02.24.26.mp4"
+      },
+      {
+        "additional": {
+          "perm": {
+            "acl": {
+              "append": true,
+              "del": true,
+              "exec": true,
+              "read": true,
+              "write": true
+            },
+            "is_acl_mode": true,
+            "posix": 711
+          },
+          "real_path": "/volume1/homes/danishnaseem05/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 01.05.57.27.mp4",
+          "size": 37782838,
+          "type": "MP4"
+        },
+        "isdir": false,
+        "name": "Fortnite 2019.10.23 - 01.05.57.27.mp4",
+        "path": "/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite/Fortnite 2019.10.23 - 01.05.57.27.mp4"
+      }
+    ],
+    "offset": 0,
+    "total": 82
+  },
+  "success": true
+}

@@ -1,0 +1,58 @@
+GET https://danishnaseem05.synology.me:5001/webapi/entry.cgi?api=SYNO.FileStation.List&version=1&method=list&additional=real_path,size,perm,type&folder_path=/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite
+
+<> 2020-01-22T105105.200.json
+
+###
+
+GET https://danishnaseem.synology.me:5001/webapi/entry.cgi?api=SYNO.FileStation.List&version=1&method=list&additional=real_path,size,perm,type&folder_path=/home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite
+
+###
+
+GET https://danishnaseem05.synology.me:5001/webapi/auth.cgi?api=SYNO.API.Auth&version=3&method=login&account=danishnaseem05&passwd=DanNass6&session=FileStation&format=cookie&otp_code=026657
+
+<> 2020-01-22T104449.200.txt
+
+###
+
+GET https://danishnaseem05.synology.me:5001/webapi/auth.cgi?api=SYNO.API.Auth&version=3&method=login&account=danishnaseem05&passwd=DanNass6&session=FileStation&format=cookie&otp_code=065235
+
+<> 2020-01-22T104352.200.txt
+
+###
+
+GET https://danishnaseem05.synology.me:5001/webapi/auth.cgi?api=SYNO.API.Auth&version=3&method=login&account=danishnaseem05&passwd=DanNass6&session=FileStation&format=cookie&otp_code=065235
+
+<> 2020-01-22T104334.200.txt
+
+###
+
+GET https://danishnaseem05.synology.me:5001/webapi/auth.cgi?api=SYNO.API.Auth&version=3&method=login&account=danishnaseem05&passwd=DanNass6&session=FileStation&format=cookie
+
+<> 2020-01-22T103904.200.txt
+
+###
+
+POST https://danishnaseem05.synology.me:5001/webapi/auth.cgi?api=SYNO.API.Auth&version=3&method=login&account=danishnaseem05&passwd=DanNass6&session=FileStation&format=cookie
+
+<> 2020-01-22T103849.200.txt
+
+###
+
+POST https://danishnaseem05.synology.me:5001/webapi/auth.cgi?api=SYNO.API.Auth&version=3&method=login&account=danishnaseem05&passwd=DanNass6&session=FileStation&format=cookie
+
+<> 2020-01-22T103608.200.txt
+
+###
+
+POST https://danishnaseem05.synology.me:5001/webapi/auth.cgi?api=SYNO.API.Auth&version=3&method=login&account=danishnaseem05&passwd=DanNass6&session=FileStation&format=cookie
+
+<> 2020-01-22T103423.200.txt
+
+###
+
+GET https://danishnaseem05.synology.me:5001/webapi/auth.cgi?api=SYNO.API.Auth&version=3&method=login&account=danishnaseem05&passwd=DanNass6&session=FileStation&format=cookie
+
+<> 2020-01-22T102834.200.txt
+
+###
+
