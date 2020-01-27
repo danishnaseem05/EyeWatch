@@ -6,7 +6,6 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpHeaders;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
@@ -29,17 +28,6 @@ public class Http_Client {
             return processRequest(response);
         }
     }
-
-    //TODO: add username and password to the postRequest
-    public static JSONObject postRequest(String url, String username, String password) throws IOException, JSONException {
-        HttpPost request = new HttpPost(url);
-        request.addHeader(HttpHeaders.USER_AGENT, "Googlebot");
-
-        try (CloseableHttpResponse response = httpClient.execute(request)) {
-            return processRequest(response);
-        }
-    }
-
 
     private static JSONObject processRequest(CloseableHttpResponse response) throws IOException, JSONException {
         // Get HttpResponse Status

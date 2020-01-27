@@ -1,10 +1,7 @@
 package Test;
 
 
-import Lib.CsvManager;
-import Lib.Http_Client;
-import Lib.OperatingSystem;
-import Lib.SynologyAPI;
+import Lib.*;
 import org.json.JSONException;
 
 import java.io.IOException;
@@ -17,6 +14,7 @@ class Testing {
     public static void main(String[] args) throws IOException, JSONException, InterruptedException {
         Testing testing = new Testing();
 
+        testing.GUITest();
         testing.csvManagerTest();
         testing.http_ClientTest();
         testing.synologyAPITest();
@@ -42,7 +40,7 @@ class Testing {
     void synologyAPITest() throws IOException, JSONException {
         SynologyAPI cloud = new SynologyAPI("danishnaseem05.synology.me", 5001);
         //System.out.println(cloud.run("danishnaseem05", "DanNass6", "home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite"));
-        System.out.println(cloud.run("danishnaseem05", "DanNass6", "home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite", "794913"));
+        System.out.println(cloud.run("danishnaseem05", "DanNass6", "home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite", "984176"));
     }
 
 
@@ -66,7 +64,11 @@ class Testing {
         for(Map.Entry<String, String> entry2: database2.entrySet()){
             System.out.println(entry2);
         }
+    }
 
+
+    void GUITest(){
+        GUI gui = new GUI();
     }
 
 

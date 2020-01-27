@@ -8,7 +8,7 @@ public class GUI extends JFrame {
     //TODO: add otp_code functionality too
 
     // GUI Components
-    JTextArea log = new JTextArea();
+    static JTextArea log = new JTextArea();
 
     private JLabel descriptionLabel  = new JLabel("Description text goes here");
     private JLabel emptySpaceLabel   = new JLabel(" ");
@@ -139,6 +139,11 @@ public class GUI extends JFrame {
     }
 
 
+    public static void appendLog(String text){
+        log.append(text+"\n");
+    }
+
+
     public void setHostname(String hostname){
         this.hostname = hostname;
     }
@@ -183,12 +188,6 @@ public class GUI extends JFrame {
         return this.runOnStartupCheckbox;
     }
 
-
-    //TODO: This main is only for testing, remove when the development is complete
-    public static void main(String[] args){
-        GUI gui = new GUI();
-
-    }
 
 
 }

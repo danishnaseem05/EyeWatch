@@ -99,52 +99,59 @@ public class SynologyAPI {
     private void displayErrors(Integer errCode){
         // CHECK: Are username and password are entered correctly
         if(errCode.equals(400)){
-            System.out.println("Authentication Error: Invalid Username or Password.");
+            GUI.appendLog("Synology Authentication Error 400: Invalid Username or Password.");
+            System.out.println("Synology Authentication Error 400: Invalid Username or Password.");
             // Show the popup
             String err_msg = "Invalid Username or Password.";
-            JOptionPane.showMessageDialog(new JFrame(), err_msg, "Authentication Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(new JFrame(), err_msg, "Synology Authentication Error 400", JOptionPane.ERROR_MESSAGE);
         }
         // CHECK: Is 2 step verification code required
         else if(errCode.equals(403)){
-            System.out.println("Authentication Error: 2 Step Verification Required.");
+            GUI.appendLog("Synology Authentication Error 403: 2 Step Verification Required.");
+            System.out.println("Synology Authentication Error 403: 2 Step Verification Required.");
             // Show the popup
             String err_msg = "2 Step Verification code is required.";
-            JOptionPane.showMessageDialog(new JFrame(), err_msg, "Authentication Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(new JFrame(), err_msg, "Synology Authentication Error 403", JOptionPane.ERROR_MESSAGE);
         }
         // CHECK: Is entered 2 Step Verification code correct
         else if(errCode.equals(404)){
-            System.out.println("Authentication Error: Provided 2 Step Verification is invalid.");
+            GUI.appendLog("Synology Authentication Error 404: Provided 2 Step Verification is invalid.");
+            System.out.println("Synology Authentication Error 404: Provided 2 Step Verification is invalid.");
             // Show the popup
             String err_msg = "Provided 2 Step Verification code is invalid.";
-            JOptionPane.showMessageDialog(new JFrame(), err_msg, "Authentication Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(new JFrame(), err_msg, "Synology Authentication Error 404", JOptionPane.ERROR_MESSAGE);
         }
         // CHECK: Does requested directory or file path exist
         else if(errCode.equals(408)){
-            System.out.println("System Error: Invalid directory or file path entered.");
+            GUI.appendLog("Synology System Error 408: Invalid directory or file path entered.");
+            System.out.println("Synology System Error 408: Invalid directory or file path entered.");
             // Show the popup
             String err_msg = "Invalid directory or file path entered.";
-            JOptionPane.showMessageDialog(new JFrame(), err_msg, "System Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(new JFrame(), err_msg, "Synology System Error 408", JOptionPane.ERROR_MESSAGE);
         }
         // CHECK: Is entered hostname or HTTPS port number valid
         else if(errCode.equals(500)){
-            System.out.println("Connection Error: Please make sure you are connected to the internet and have entered a valid hostname and HTTPS port number.");
+            GUI.appendLog("Connection Error 500: Please make sure you are connected to the internet and have entered a valid hostname and HTTPS port number.");
+            System.out.println("Connection Error 500: Please make sure you are connected to the internet and have entered a valid hostname and HTTPS port number.");
             // Show the popup
             String err_msg = "Please make sure you are connected to the internet and have entered a valid hostname and HTTPS port number.";
-            JOptionPane.showMessageDialog(new JFrame(), err_msg, "Connection Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(new JFrame(), err_msg, "Connection Error 500", JOptionPane.ERROR_MESSAGE);
         }
         // CHECK: Is there a user caused error
         else if(errCode.equals(502)){
-            System.out.println("Unknown Error: Please recheck your entered information and Try Again.");
+            GUI.appendLog("Unknown Error 502: Please recheck your entered information and Try Again.");
+            System.out.println("Unknown Error 502: Please recheck your entered information and Try Again.");
             // Show the popup
             String err_msg = "Please recheck your entered information and Try Again.";
-            JOptionPane.showMessageDialog(new JFrame(), err_msg, "Unknown Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(new JFrame(), err_msg, "Unknown Error 502", JOptionPane.ERROR_MESSAGE);
         }
         // CHECK: Is port number a HTTP port number
         else if(errCode.equals(503)){
-            System.out.println("Connection Error: HTTP port not supported.");
+            GUI.appendLog("Connection Error 503: HTTP port not supported.");
+            System.out.println("Connection Error 503: HTTP port not supported.");
             // Show the popup
             String err_msg = "HTTP port not supported.";
-            JOptionPane.showMessageDialog(new JFrame(), err_msg, "Connection Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(new JFrame(), err_msg, "Connection Error 503", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -173,6 +180,7 @@ public class SynologyAPI {
         LinkedList<String> filenames;
 
         // STEP-1 checking if hostname is valid
+        GUI.appendLog("Verifying hostname and HTTPS port number");
         System.out.println("Verifying hostname and HTTPS port number");
         try{
             JSONObject step1 = getAPI_Info();
@@ -181,6 +189,7 @@ public class SynologyAPI {
 
             if(step1Success.equals(true)){
                 // STEP-2 checking if username and password are valid
+                GUI.appendLog("Authenticating username and password");
                 System.out.println();
                 System.out.println("Authenticating username and password");
                 JSONObject step2 = authenticateWith2StepVerification(username, password, otp_code);
@@ -209,6 +218,7 @@ public class SynologyAPI {
         LinkedList filenames;
 
         // STEP-1 checking if hostname is valid
+        GUI.appendLog("Verifying hostname and HTTPS port number");
         System.out.println("Verifying hostname and HTTPS port number");
         try{
             JSONObject step1 = getAPI_Info();
@@ -216,6 +226,7 @@ public class SynologyAPI {
 
             if(step1Success.equals(true)){
                 // STEP-2 checking if username and password are valid
+                GUI.appendLog("Authenticating username and password");
                 System.out.println();
                 System.out.println("Authenticating username and password");
                 JSONObject step2 = authenticateWithout2StepVerification(username, password);
@@ -245,20 +256,25 @@ public class SynologyAPI {
             JSONObject data = authentication.getJSONObject("data");
             String sid = data.getString("sid");
             this.sid = sid;
+            GUI.appendLog("Successfully logged in. Session ID Saved.");
             System.out.println();
             System.out.println("Successfully logged in. Session ID Saved.");
 
             // STEP-3 checking if remote directory path is valid
+            GUI.appendLog("Connection established");
+            GUI.appendLog("Accessing the remote directory.");
             System.out.println();
             System.out.println("Connection established");
             System.out.println("Accessing the remote directory.");
             JSONObject remoteFilesJSON = accessRemoteDirectory(remotePath);
             Boolean remoteFilesJSONSuccess = remoteFilesJSON.getBoolean("success");
             if(remoteFilesJSONSuccess.equals(true)){
+                GUI.appendLog("Getting the filenames from the remote directory.");
                 System.out.println("Getting the filenames from the remote directory.");
                 filenames = parseRemoteFilesJSON(remoteFilesJSON);
             }
             else{
+                GUI.appendLog("Remote Directory connection failed.");
                 System.out.println();
                 System.out.println("Remote Directory connection failed.");
                 JSONObject error = remoteFilesJSON.getJSONObject("error");
@@ -268,6 +284,7 @@ public class SynologyAPI {
             }
         }
         else{
+            GUI.appendLog("Authentication Failed");
             System.out.println();
             System.out.println("Authentication Failed");
             JSONObject error = authentication.getJSONObject("error");

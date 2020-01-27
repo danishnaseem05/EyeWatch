@@ -2,7 +2,6 @@ package Lib;
 
 
 import javax.swing.*;
-import java.awt.image.ImagingOpException;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -31,10 +30,14 @@ public class CsvManager {
             myPrintWriter.flush();
             myPrintWriter.close();
 
-            JOptionPane.showMessageDialog(null, "Record saved");
+            GUI.appendLog("Success: Settings Saved.");
+            System.out.println("Success: Settings Saved.");
+            JOptionPane.showMessageDialog(null, "Settings saved.");
 
         } catch(Exception e){
-            JOptionPane.showMessageDialog(null, "Record not saved");
+            GUI.appendLog("Success: Settings cannot be saved.");
+            System.out.println("Success: Settings cannot be saved.");
+            JOptionPane.showMessageDialog(null, "Error: Settings cannot be saved.");
         }
     }
 
@@ -46,7 +49,6 @@ public class CsvManager {
             for(String line: lines){
                 line = line.replace("\"", "");
                 String[] result = line.split(",");
-                System.out.println("RESULT: " + Arrays.toString(result));
                 database.put(result[0], result[1]);
             }
         } catch(Exception e){
@@ -59,16 +61,19 @@ public class CsvManager {
     public void createCsv(String filepath, String filenameNoExt){
         try{
             String full_path = filepath + File.separator + filenameNoExt + ".csv";
-            System.out.println("Full Path: " + full_path);
+            GUI.appendLog("CSV Absolute file Path: " + full_path);
+            System.out.println("CSV Absolute file Path: " + full_path);
             File myCSV = new File(full_path);
             if(myCSV.createNewFile()){
-                System.out.println("File created: " + myCSV.getName());
+                GUI.appendLog("CSV File created: " + myCSV.getName());
+                System.out.println("CSV File created: " + myCSV.getName());
             } else{
-                System.out.println("File already exists.");
+                GUI.appendLog("CSV File already exists.");
+                System.out.println("CSV File already exists.");
             }
         } catch (IOException e){
-            System.out.println("An error occurred.");
-            e.printStackTrace();
+            GUI.appendLog("Error: CSV file could not be created.");
+            System.out.println("Error: CSV file could not be created.");
         }
 
     }
