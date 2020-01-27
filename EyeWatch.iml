@@ -26,5 +26,14 @@
     <orderEntry type="library" exported="" name="apache-httpcomponents-client-4.5.11" level="application" />
     <orderEntry type="library" exported="" name="java-json" level="application" />
     <orderEntry type="library" exported="" name="javafx" level="application" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.19.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
