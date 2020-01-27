@@ -117,15 +117,4 @@ public class OperatingSystem {
         return folderPath;
     }
 
-
-    //TODO: This main is only for testing, remove when the development is complete
-    public static void main (String [] args) throws IOException, InterruptedException {
-        OperatingSystem os = new OperatingSystem();
-        //os.runOnStartup();
-        os.runInBackground();
-        String path = os.chooseLocalDirectory().getAbsolutePath();
-        System.out.println(path);
-        os.watchLocalDirectoryState(path);
-    }
-
 }

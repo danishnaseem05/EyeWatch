@@ -279,11 +279,5 @@ public class SynologyAPI {
     }
 
 
-    //TODO: This main is only for testing, remove when the development is complete
-    public static void main(String args[]) throws IOException, JSONException {
-        SynologyAPI cloud = new SynologyAPI("danishnaseem05.synology.me", 5001);
-        //System.out.println(cloud.run("danishnaseem05", "DanNass6", "home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite"));
-        System.out.println(cloud.run("danishnaseem05", "DanNass6", "home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite", "186884"));
-    }
 
 }
