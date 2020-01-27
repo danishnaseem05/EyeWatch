@@ -18,7 +18,7 @@ public class OperatingSystem {
         String user = getUser();
         String pathToStartup = "C:\\Users\\" + user +
                 "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup";
-        //TODO: add java program to pathToStartup
+        //TODO: add this java program to pathToStartup
 
     }
 
