@@ -8,6 +8,8 @@ import Lib.SynologyAPI;
 import org.json.JSONException;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 //TODO
 class Testing {
@@ -16,9 +18,9 @@ class Testing {
         Testing testing = new Testing();
 
         testing.csvManagerTest();
-        //testing.http_ClientTest();
-        //testing.synologyAPITest();
-        //testing.operatingSystemTest();
+        testing.http_ClientTest();
+        testing.synologyAPITest();
+        testing.operatingSystemTest();
     }
 
 
@@ -45,8 +47,26 @@ class Testing {
 
 
     void csvManagerTest(){
+        System.out.println("CREATE CSV FILE:");
         CsvManager csvManager = new CsvManager();
         csvManager.createCsv("./TEST", "test");
+
+        System.out.println("\nREAD TEST.CSV:");
+        HashMap<String, String> database = csvManager.readCsv("./TEST/test.csv");
+        for(Map.Entry<String, String> entry: database.entrySet()){
+            System.out.println(entry);
+        }
+
+        System.out.println("\nWRITE TO writeTest.csv:");
+        csvManager.saveSetting(database.get("localDirPath"), database.get("hostnameOrIP"), database.get("portNumber"), database.get("username"),
+                database.get("password"), database.get("remoteDirPath"), database.get("otp_code"), database.get("isRunOnStartup"), "./TEST/writeTest.csv");
+
+        System.out.println("\nREAD writeTest.csv");
+        HashMap<String, String> database2 = csvManager.readCsv("./TEST/writeTest.csv");
+        for(Map.Entry<String, String> entry2: database2.entrySet()){
+            System.out.println(entry2);
+        }
+
     }
 
 

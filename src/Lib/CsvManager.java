@@ -1,71 +1,58 @@
 package Lib;
 
 
+import javax.swing.*;
 import java.awt.image.ImagingOpException;
 import java.io.*;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.*;
 
 public class CsvManager {
 
 
-    public void writeCsv(LinkedList<String> keys, LinkedList<String> values, String filePath){
-
-
-        HashMap<String, String> userSetting = new HashMap<>();
-
-        userSetting.put("localDirPath", "");
-        userSetting.put("hostnameOrIP", "");
-        userSetting.put("portNumber", "");
-        userSetting.put("username", "");
-        userSetting.put("password", "");
-        userSetting.put("remoteDirPath", "");
-        userSetting.put("isRunOnStartup", "");
-
-        FileWriter fileWriter = null;
+    public void saveSetting(String localDirPath, String hostnameOrIP, String portNumber, String username, String password,
+                            String remoteDirPath, String otp_code, String isRunOnStartup, String fullFilePath){
 
         try{
-            fileWriter = new FileWriter(filePath);
-            for(Map.Entry<String, String> entry: userSetting.entrySet()){
-                String key = entry.getKey();
-                String value = entry.getValue();
+            FileWriter myFileWriter = new FileWriter(fullFilePath, false);
+            BufferedWriter myBuffWriter = new BufferedWriter(myFileWriter);
+            PrintWriter myPrintWriter = new PrintWriter(myBuffWriter);
 
-                fileWriter.append(key);
-                fileWriter.append(value);
-                fileWriter.append("\n");
+            myPrintWriter.println("localDirPath," + localDirPath + "\n" +
+                                "hostnameOrIP," + hostnameOrIP + "\n" +
+                                "portNumber," + portNumber + "\n" +
+                                "username," + username + "\n" +
+                                "password," + password + "\n" +
+                                "remoteDirPath," + remoteDirPath + "\n" +
+                                "otp_code," + otp_code + "\n" +
+                                "isRunOnStartup," + isRunOnStartup);
 
-            }
+            myPrintWriter.flush();
+            myPrintWriter.close();
+
+            JOptionPane.showMessageDialog(null, "Record saved");
+
         } catch(Exception e){
-            e.printStackTrace();
-        } finally{
-            try{
-                fileWriter.flush();
-                fileWriter.close();
-            } catch (Exception e){
-                e.printStackTrace();
-            }
+            JOptionPane.showMessageDialog(null, "Record not saved");
         }
-
     }
 
 
-    public void readCsv(String filePath){
-        BufferedReader reader = null;
-
+    public HashMap<String, String> readCsv(String fullFilePath){
+        HashMap<String, String> database = new HashMap<>();
         try{
-
-            String line = "";
-            reader = new BufferedReader(new FileReader(filePath));
-            reader.readLine();
-
-            while((line = reader.readLine()) != null){
-                //TODO: do something
+            List<String> lines = Files.readAllLines(Paths.get(fullFilePath));
+            for(String line: lines){
+                line = line.replace("\"", "");
+                String[] result = line.split(",");
+                System.out.println("RESULT: " + Arrays.toString(result));
+                database.put(result[0], result[1]);
             }
-
         } catch(Exception e){
             e.printStackTrace();
         }
+        return database;
     }
 
 
