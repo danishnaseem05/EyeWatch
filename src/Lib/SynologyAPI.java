@@ -45,6 +45,7 @@ public class SynologyAPI {
         String url = "https://" + hostname + ":" + portNumber +
                 "/webapi/query.cgi?api=SYNO.API.Info&version=1&method=query&query=SYNO.API.Auth,SYNO.FileStation.List";
 
+        GUI.appendLog("GET: " + url);
         JSONObject response = Http_Client.getRequest(url);
         return response;
     }
@@ -81,6 +82,7 @@ public class SynologyAPI {
                 "/webapi/entry.cgi?api=SYNO.FileStation.List&version=1&method=list&additional=real_path%2Csize%2Cperm%2Ctype&folder_path=%2F" +
                 remotePath;
         String newUrl = url.replaceAll(" ", "%20");
+        GUI.appendLog("GET: " + newUrl);
 
         JSONObject response = Http_Client.getRequest(newUrl);
         return response;

@@ -32,7 +32,7 @@ class Testing {
         //os.runOnStartup();
         os.runInBackground();
         String path = os.chooseLocalDirectory().getAbsolutePath();
-        System.out.println(path);
+        System.out.println("Current Directory Absolute Path: " + path);
         os.watchLocalDirectoryState(path);
     }
 

@@ -48,7 +48,8 @@ public class OperatingSystem {
     // Call this method after user clicks on Done
     public void runInBackground(){
         if (!SystemTray.isSupported()) {
-            System.out.println("SystemTray is not supported");
+            GUI.appendLog("Error: System Tray not supported. Program cannot run in the background");
+            System.out.println("Error: System Tray not supported. Program cannot run in the background");
             return;
         }
         Image image = Toolkit.getDefaultToolkit().getImage("./resources/icon/Eye Watch (System Tray Icon).png");
@@ -74,6 +75,7 @@ public class OperatingSystem {
         try {
             tray.add(trayIcon);
         } catch (AWTException e) {
+            GUI.appendLog("AWTException: TrayIcon could not be added");
             System.out.println("TrayIcon could not be added.");
         }
     }
