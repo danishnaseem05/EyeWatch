@@ -1,7 +1,7 @@
 package Test;
 
 
-import Lib.CsvReaderWriter;
+import Lib.CsvManager;
 import Lib.Http_Client;
 import Lib.OperatingSystem;
 import Lib.SynologyAPI;
@@ -15,7 +15,7 @@ class Testing {
     public static void main(String[] args) throws IOException, JSONException, InterruptedException {
         Testing testing = new Testing();
 
-        testing.csvReaderWriterTest();
+        testing.csvManagerTest();
         //testing.http_ClientTest();
         //testing.synologyAPITest();
         //testing.operatingSystemTest();
@@ -44,9 +44,9 @@ class Testing {
     }
 
 
-    void csvReaderWriterTest(){
-        CsvReaderWriter csvReaderWriter = new CsvReaderWriter();
-
+    void csvManagerTest(){
+        CsvManager csvManager = new CsvManager();
+        csvManager.createCsv("./TEST", "test");
     }
 
 

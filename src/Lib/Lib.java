@@ -56,8 +56,9 @@ public class Lib {
     }
 
     public boolean isDatabase(){
-        // Looks for the database named EyeWatchUserSetting.(database extension)
-        // If database exists return true, otherwise false
+        // Looks in the current directory for a folder named .EyeWatch
+        // If it exists, then it goes in and looks for UserSetting.csv,
+        // It that file exists, then returns true, otherwise false
 
         return false;
     }

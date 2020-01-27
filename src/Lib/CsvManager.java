@@ -1,16 +1,18 @@
 package Lib;
 
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.awt.image.ImagingOpException;
+import java.io.*;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 
-public class CsvReaderWriter {
+public class CsvManager {
 
 
-    public void writeCsv(String filePath){
+    public void writeCsv(LinkedList<String> keys, LinkedList<String> values, String filePath){
+
+
         HashMap<String, String> userSetting = new HashMap<>();
 
         userSetting.put("localDirPath", "");
@@ -67,7 +69,20 @@ public class CsvReaderWriter {
     }
 
 
-    public void createCsv(String filepath){
+    public void createCsv(String filepath, String filenameNoExt){
+        try{
+            String full_path = filepath + File.separator + filenameNoExt + ".csv";
+            System.out.println("Full Path: " + full_path);
+            File myCSV = new File(full_path);
+            if(myCSV.createNewFile()){
+                System.out.println("File created: " + myCSV.getName());
+            } else{
+                System.out.println("File already exists.");
+            }
+        } catch (IOException e){
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
 
     }
 
