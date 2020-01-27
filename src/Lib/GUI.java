@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class GUI extends JFrame {
+    //TODO: add otp_code functionality too
 
     // GUI Components
     JTextArea log = new JTextArea();
