@@ -23,6 +23,7 @@
   <component name="ProjectId" id="1Wb8mBQOlmRUNhQ31apxsm6NowV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -374,7 +375,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.OperatingSystem">
+  <component name="RunManager" selected="Application.GUI">
     <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lib.GUI" />
       <module name="EyeWatch" />
@@ -434,8 +435,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.OperatingSystem" />
         <item itemvalue="Application.GUI" />
+        <item itemvalue="Application.OperatingSystem" />
         <item itemvalue="Application.SynologyAPI" />
         <item itemvalue="HTTP Request.get#1" />
         <item itemvalue="Python tests.Unittests in Test" />
