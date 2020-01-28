@@ -9,6 +9,8 @@ import java.util.*;
 
 public class CsvManager {
 
+    //TODO: add a private helper method to close the current .csv file, if open; before attempting to append data to it.
+
 
     public void saveSetting(String localDirPath, String hostnameOrIP, String portNumber, String username, String password,
                             String remoteDirPath, String otp_code, String isRunOnStartup, String fullFilePath){
@@ -44,6 +46,8 @@ public class CsvManager {
 
     public HashMap<String, String> readCsv(String fullFilePath){
         HashMap<String, String> database = new HashMap<>();
+        GUI.appendLog("Attempting to read from the database.");
+        System.out.println("Attempting to read from the database.");
         try{
             List<String> lines = Files.readAllLines(Paths.get(fullFilePath));
             for(String line: lines){
@@ -51,6 +55,8 @@ public class CsvManager {
                 String[] result = line.split(",");
                 database.put(result[0], result[1]);
             }
+            GUI.appendLog("Successfully read from the database");
+            System.out.println("Successfully read from the database");
         } catch(Exception e){
             System.out.println("Error: Could not read from the CSV file. Check the filepath and Try Again.");
         }

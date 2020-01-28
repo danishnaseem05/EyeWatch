@@ -77,8 +77,18 @@ class Testing {
 
 
     void libStaticMethodsTest(){
-        boolean database = Lib.isDatabase();
-        System.out.println(database);
+        boolean databaseBool = Lib.isDatabase();
+        System.out.println("Is Database? " + databaseBool);
+
+        Lib.createNewDatabase();
+        Lib.writeToDatabase("./TEST/.EyeWatch", "danishnaseem05.synology.me", "5001", "danishnaseem05", "DanNass6", "home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite", "794913", "false");
+
+        System.out.println();
+        HashMap<String, String> database = Lib.readDatabase();
+        System.out.println();
+        for(Map.Entry<String, String> entry: database.entrySet()){
+            System.out.println(entry);
+        }
     }
 
 }

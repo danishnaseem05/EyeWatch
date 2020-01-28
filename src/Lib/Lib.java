@@ -11,7 +11,7 @@ public class Lib {
     SynologyAPI cloudDrive;
 
     HashMap<String, String> database;
-    String pathToDatabase = "./.EyeWatch/UserSetting.csv";
+    static String pathToDatabase = "./.EyeWatch/UserSetting.csv";
 
     // Instance variables
     private String localDirPath;
@@ -21,8 +21,10 @@ public class Lib {
     private String password;
     private String remoteDirPath;
     private boolean isRunOnStartup;
+    private String otp_code;
 
     private GUI gui;
+
 
     public Lib(String hostname, Integer portNumber){
         this.gui = new GUI();
@@ -64,14 +66,12 @@ public class Lib {
         if(new File("./.EyeWatch").exists()){
             if(new File("./.EyeWatch/UserSetting.csv").exists())
                 return true;
-        } else{
-
         }
         return false;
     }
 
 
-    public void createNewDatabase(){
+    public static void createNewDatabase(){
         CsvManager csvManager = new CsvManager();
         if(! isDatabase()){
             File dir = new File("./.EyeWatch");
@@ -84,24 +84,26 @@ public class Lib {
     }
 
 
-    public HashMap<String, String> readDatabase(){
+    public static HashMap<String, String> readDatabase(){
         CsvManager csvManager = new CsvManager();
-        return csvManager.readCsv(this.pathToDatabase);
+        return csvManager.readCsv(pathToDatabase);
     }
 
-    public void writeToDatabase(HashMap<String, String> toWrite){
-        // writes to each key inside the database, matching the key of toWrite, with its respected value
-
+    public static void writeToDatabase(String localDirPath, String hostnameOrIP, String portNumber, String username, String password,
+                                 String remoteDirPath, String otp_code, String isRunOnStartup){
+        CsvManager csvManager = new CsvManager();
+        csvManager.saveSetting(localDirPath, hostnameOrIP, portNumber, username, password, remoteDirPath, otp_code, isRunOnStartup, pathToDatabase);
     }
 
 
-    public void collectDatabaseVars(){
+    private void collectDatabaseVars(){
         this.localDirPath = database.get("localDirPath");
         this.hostnameOrIP = database.get("hostnameOrIP");
         this.portNumber = Integer.parseInt(database.get("portNumber"));
         this.username = database.get("username");
         this.password = database.get("password");
         this.remoteDirPath = database.get("remoteDirPath");
+        this.otp_code = database.get("otp_code");
         this.isRunOnStartup = Boolean.parseBoolean(database.get("isRunOnStartup"));
     }
 
