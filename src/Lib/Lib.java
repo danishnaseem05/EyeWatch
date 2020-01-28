@@ -1,6 +1,7 @@
 package Lib;
 
 
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -10,7 +11,7 @@ public class Lib {
     SynologyAPI cloudDrive;
 
     HashMap<String, String> database;
-    String pathToDatabase = "./EyeWatchDatabase.(extension name)";
+    String pathToDatabase = "./.EyeWatch/UserSetting.csv";
 
     // Instance variables
     private String localDirPath;
@@ -35,7 +36,7 @@ public class Lib {
         if(isDatabase()){
             // If database is present
             // Open the database for reading and writing
-            openDatabase();
+            //openDatabase();
             this.database = readDatabase();
             // Don't show the GUI (unless the user clicks on settings from the system tray),
             // and starts running in the background (inside the system tray)
@@ -44,7 +45,7 @@ public class Lib {
             // Save each of this.database key's value inside an instance variable, whose name is same as the key's
             collectDatabaseVars();
             // Then close the database
-            closeDatabase();
+            //closeDatabase();
             // Then calls the respected methods, passing those variables as arguments
             // First method will be to start tracking the local dir
             os.watchLocalDirectoryState(localDirPath);
@@ -54,52 +55,43 @@ public class Lib {
 
         } else{
             createNewDatabase();
-            openDatabase();
-            writeToNewDatabase();
+            //openDatabase();
+            //writeToNewDatabase();
         }
     }
 
-    public boolean isDatabase(){
-        // Looks in the current directory for a folder named .EyeWatch
-        // If it exists, then it goes in and looks for UserSetting.csv,
-        // It that file exists, then returns true, otherwise false
+    public static boolean isDatabase(){
+        if(new File("./.EyeWatch").exists()){
+            if(new File("./.EyeWatch/UserSetting.csv").exists())
+                return true;
+        } else{
 
+        }
         return false;
     }
 
 
     public void createNewDatabase(){
-        // create a new database in the program directory named EyeWatchUserSetting.(database extension)
-    }
-
-
-    public void openDatabase(){
-        // opens the Database for reading and writing
+        CsvManager csvManager = new CsvManager();
+        if(! isDatabase()){
+            File dir = new File("./.EyeWatch");
+            if(dir.exists()) csvManager.createCsv(dir.getAbsolutePath(), "UserSetting");
+            else{
+                dir.mkdir();
+                csvManager.createCsv(dir.getAbsolutePath(), "UserSetting");
+            }
+        } else System.out.println("Error: Database already been created");
     }
 
 
     public HashMap<String, String> readDatabase(){
-        // collect all the key and value pairs probably in a HashMap
-        // and return the HashMap
-        HashMap<String, String> database = new HashMap<>();
-
-        return database;
+        CsvManager csvManager = new CsvManager();
+        return csvManager.readCsv(this.pathToDatabase);
     }
 
     public void writeToDatabase(HashMap<String, String> toWrite){
         // writes to each key inside the database, matching the key of toWrite, with its respected value
 
-    }
-
-
-    public void writeToNewDatabase(){
-        // this method writes variables as keys, and sets their values as empty strings
-        HashMap<String, String> toWrite = new HashMap<>();
-    }
-
-
-    public void closeDatabase(){
-        // close the database
     }
 
 

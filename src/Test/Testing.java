@@ -16,11 +16,12 @@ class Testing {
     public static void main(String[] args) throws IOException, JSONException, InterruptedException {
         Testing testing = new Testing();
 
-        testing.csvManagerTest();
+        //testing.csvManagerTest();
         //testing.http_ClientTest();
         //testing.synologyAPITest();
         //GUI gui = testing.GUITest();
         //testing.operatingSystemTest(gui);
+        testing.libStaticMethodsTest();
     }
 
 
@@ -74,5 +75,10 @@ class Testing {
         return gui;
     }
 
+
+    void libStaticMethodsTest(){
+        boolean database = Lib.isDatabase();
+        System.out.println(database);
+    }
 
 }

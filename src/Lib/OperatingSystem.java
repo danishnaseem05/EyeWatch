@@ -66,8 +66,7 @@ public class OperatingSystem {
         MenuItem settingsItem = new MenuItem("Settings");
         settingsItem.addActionListener(e -> gui.setVisible(true));
         MenuItem aboutItem = new MenuItem("About");
-        //TODO: aboutItem opens a window displaying the program name, version number, and copyrights.
-        //aboutItem.addActionListener(e -> );
+        aboutItem.addActionListener(e -> aboutWindow());
         MenuItem exitItem = new MenuItem("Exit");
         exitItem.addActionListener(e -> System.exit(1));
         popup.add(settingsItem);
@@ -82,6 +81,12 @@ public class OperatingSystem {
             GUI.appendLog("AWTException: TrayIcon could not be added");
             System.out.println("TrayIcon could not be added.");
         }
+    }
+
+
+    //TODO: this method opens a window displaying the program name, version number, and copyrights.
+    private void aboutWindow(){
+
     }
 
 
