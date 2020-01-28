@@ -4,6 +4,7 @@ package Test;
 import Lib.*;
 import org.json.JSONException;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,14 +12,15 @@ import java.util.Map;
 //TODO
 class Testing {
 
+
     public static void main(String[] args) throws IOException, JSONException, InterruptedException {
         Testing testing = new Testing();
 
-        testing.GUITest();
         testing.csvManagerTest();
-        testing.http_ClientTest();
-        testing.synologyAPITest();
-        testing.operatingSystemTest();
+        //testing.http_ClientTest();
+        //testing.synologyAPITest();
+        //GUI gui = testing.GUITest();
+        //testing.operatingSystemTest(gui);
     }
 
 
@@ -27,13 +29,20 @@ class Testing {
     }
 
 
-    void operatingSystemTest() throws IOException, InterruptedException {
-        OperatingSystem os = new OperatingSystem();
+    void operatingSystemTest(GUI gui) throws IOException, InterruptedException {
+        OperatingSystem os = new OperatingSystem(gui);
         //os.runOnStartup();
         os.runInBackground();
-        String path = os.chooseLocalDirectory().getAbsolutePath();
-        System.out.println("Current Directory Absolute Path: " + path);
-        os.watchLocalDirectoryState(path);
+        File path = os.chooseLocalDirectory();
+        if(path == null) {
+            System.out.println("No local directory selected");
+            return;
+        }
+        else{
+            String absPath = path.getAbsolutePath();
+            System.out.println("Current Directory Absolute Path: " + absPath);
+            os.watchLocalDirectoryState(absPath);
+        }
     }
 
 
@@ -47,28 +56,22 @@ class Testing {
     void csvManagerTest(){
         System.out.println("CREATE CSV FILE:");
         CsvManager csvManager = new CsvManager();
-        csvManager.createCsv("./TEST", "test");
+        csvManager.createCsv("./TEST/.EyeWatch", "test");
 
-        System.out.println("\nREAD TEST.CSV:");
-        HashMap<String, String> database = csvManager.readCsv("./TEST/test.csv");
-        for(Map.Entry<String, String> entry: database.entrySet()){
-            System.out.println(entry);
-        }
+        System.out.println("\nWRITE TO test.csv:");
+        csvManager.saveSetting("./TEST/.EyeWatch", "danishnaseem05.synology.me", "5001", "danishnaseem05", "DanNass6", "home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite", "794913", "false", "./TEST/.EyeWatch/test.csv");
 
-        System.out.println("\nWRITE TO writeTest.csv:");
-        csvManager.saveSetting(database.get("localDirPath"), database.get("hostnameOrIP"), database.get("portNumber"), database.get("username"),
-                database.get("password"), database.get("remoteDirPath"), database.get("otp_code"), database.get("isRunOnStartup"), "./TEST/writeTest.csv");
-
-        System.out.println("\nREAD writeTest.csv");
-        HashMap<String, String> database2 = csvManager.readCsv("./TEST/writeTest.csv");
+        System.out.println("\nREAD test.csv");
+        HashMap<String, String> database2 = csvManager.readCsv("./TEST/.EyeWatch/test.csv");
         for(Map.Entry<String, String> entry2: database2.entrySet()){
             System.out.println(entry2);
         }
     }
 
 
-    void GUITest(){
+    GUI GUITest(){
         GUI gui = new GUI();
+        return gui;
     }
 
 

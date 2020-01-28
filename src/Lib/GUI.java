@@ -2,7 +2,16 @@ package Lib;
 
 
 import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.text.DefaultEditorKit;
+import javax.swing.text.JTextComponent;
+import javax.swing.text.TextAction;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
+import java.io.File;
 
 public class GUI extends JFrame {
     //TODO: add otp_code functionality too
@@ -10,7 +19,13 @@ public class GUI extends JFrame {
     // GUI Components
     static JTextArea log = new JTextArea();
 
-    private JLabel descriptionLabel  = new JLabel("Description text goes here");
+    private JMenu jMenu = new JMenu("Edit");
+    private JMenuBar jMenuBar = new JMenuBar();
+    private JPopupMenu popupMenu = new JPopupMenu();
+
+    private JTextArea descriptionTextArea  = new JTextArea("Scans the remote directory for files that exist in the local directory. If they exist" +
+            " in the remote directory, then they will be deleted from the local directory; otherwise the local directory will be monitored for any" +
+            " new or modified files, if so then another scan will run on the remote directory.");
     private JLabel emptySpaceLabel   = new JLabel(" ");
     private JLabel localDirLabel     = new JLabel("<html><span style='font-size:11px'> Local Directory </span></html>");
     private JLabel remoteDirLabel    = new JLabel("<html><span style='font-size:11px'> Remote Directory </span></html>");
@@ -18,12 +33,14 @@ public class GUI extends JFrame {
     private JLabel HTTPSPortNumLabel = new JLabel("HTTPS Port Number");
     private JLabel usernameLabel     = new JLabel("Username");
     private JLabel passwordLabel     = new JLabel("Password");
+    private JLabel otpCodeLabel          = new JLabel("2 Step Verification Code");
 
     JTextField localDirTextField     = new JTextField(40);
     JTextField remoteDirTextField    = new JTextField(47);
     JTextField hostOrIPTextField     = new JTextField(12);
     JTextField HTTPSPortNumTextField = new JTextField(7);
     JTextField usernameTextField     = new JTextField(12);
+    JTextField otpCodeTextField      = new JTextField(7);
 
     JPasswordField passwordField = new JPasswordField(12);
 
@@ -48,8 +65,6 @@ public class GUI extends JFrame {
         this.password = "";
         this.runOnStartupCheckbox = false;
 
-
-        JPanel flow1Panel  = new JPanel (new FlowLayout (FlowLayout.LEFT));
         JPanel flow2Panel  = new JPanel (new FlowLayout (FlowLayout.CENTER));
         JPanel flow3Panel  = new JPanel (new FlowLayout (FlowLayout.CENTER));
         JPanel flow4Panel  = new JPanel (new FlowLayout (FlowLayout.LEFT));
@@ -57,14 +72,28 @@ public class GUI extends JFrame {
         JPanel flow6Panel  = new JPanel (new FlowLayout (FlowLayout.CENTER));
         JPanel flow7Panel  = new JPanel (new FlowLayout (FlowLayout.LEFT));
         JPanel flow8Panel  = new JPanel (new FlowLayout (FlowLayout.LEFT));
-        JPanel flow9Panel  = new JPanel (new FlowLayout (FlowLayout.LEFT));
+        JPanel flow9Panel  = new JPanel (new FlowLayout (FlowLayout.RIGHT));
         JPanel flow10Panel = new JPanel (new FlowLayout (FlowLayout.CENTER));
         JPanel flow11Panel = new JPanel (new FlowLayout (FlowLayout.LEFT));
+        JPanel flowOtpPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
 
-        JPanel gridPanel  = new JPanel(new GridLayout(12,6));
+        JPanel gridPanel  = new JPanel(new GridLayout(11,6));
+
+        addAction(new DefaultEditorKit.CutAction(), KeyEvent.VK_X,  "Cut");
+        addAction(new DefaultEditorKit.CutAction(), KeyEvent.VK_C,  "Copy");
+        addAction(new DefaultEditorKit.CutAction(), KeyEvent.VK_V,  "Paste");
+
+        setPopup(log, localDirTextField, remoteDirTextField, hostOrIPTextField, HTTPSPortNumTextField, usernameTextField, passwordField);
+
+        Color jFrameColor = this.getBackground();
+        //System.out.println(jFrameColor);
+        Border border = BorderFactory.createLineBorder(new Color(130, 130, 130));
 
         log.setEditable(false);
-        log.setRows(5);
+        log.setLineWrap(true);
+        log.setRows(10);
+        log.setForeground(Color.BLUE);
+        log.setBorder(BorderFactory.createCompoundBorder(border, BorderFactory.createEmptyBorder(10, 10, 10, 10)));
 
         localDirBrowseButton.setToolTipText("Open local file explorer");
         localDirTextField.setToolTipText("Enter path to local directory");
@@ -76,7 +105,17 @@ public class GUI extends JFrame {
         runOnStartupCheckBox.setToolTipText("Start the program on startup");
         doneButton.setToolTipText("Run the program and save the settings");
 
-        flow1Panel.add(descriptionLabel);
+        descriptionTextArea.setFont(descriptionTextArea.getFont().deriveFont(Font.BOLD, descriptionTextArea.getFont().getSize()));
+        descriptionTextArea.setBackground(Color.BLACK);
+        descriptionTextArea.setForeground(Color.WHITE);
+        descriptionTextArea.setEditable(false);
+        descriptionTextArea.setRows(3);
+        descriptionTextArea.setLineWrap(true);
+        descriptionTextArea.setWrapStyleWord(true);
+
+
+        descriptionTextArea.setBorder(BorderFactory.createCompoundBorder(border, BorderFactory.createEmptyBorder(10, 10, 10, 10)));
+
         flow2Panel.add(emptySpaceLabel);
 
         //Local Directory
@@ -103,6 +142,7 @@ public class GUI extends JFrame {
         flow8Panel.add(passwordField);
 
         flow9Panel.add(remoteDirTextField);
+        flow9Panel.add(Box.createHorizontalStrut(1));
 
         flow10Panel.add(emptySpaceLabel);
         // run on Startup Checkbox
@@ -113,7 +153,11 @@ public class GUI extends JFrame {
         // Done Button
         flow11Panel.add(doneButton);
 
-        gridPanel.add(flow1Panel);
+        // otpCode
+        flowOtpPanel.add(otpCodeLabel);
+        flowOtpPanel.add(otpCodeTextField);
+        flowOtpPanel.add(Box.createHorizontalStrut(1));
+
         gridPanel.add(flow2Panel);
         gridPanel.add(flow3Panel);
         gridPanel.add(flow4Panel);
@@ -121,20 +165,42 @@ public class GUI extends JFrame {
         gridPanel.add(flow6Panel);
         gridPanel.add(flow7Panel);
         gridPanel.add(flow8Panel);
+        gridPanel.add(flowOtpPanel);
         gridPanel.add(flow9Panel);
         gridPanel.add(flow10Panel);
         gridPanel.add(flow11Panel);
 
+        gridPanel.setBackground(Color.ORANGE);
+
+        jMenuBar.add(jMenu);
+
+        setJMenuBar(jMenuBar);
+
+        add(descriptionTextArea, BorderLayout.NORTH);
         add(gridPanel, BorderLayout.CENTER);
         add(new JScrollPane(log), BorderLayout.SOUTH);
 
-        setSize(555, 500);
+        setSize(555, 800);
         setResizable(false);
-        setLocation(700, 320);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocation(680, 150);
+
+        setDefaultCloseOperation(HIDE_ON_CLOSE);
+
         ImageIcon img = new ImageIcon("./resources/icon/Eye Watch (System Tray Icon).png");
         setIconImage(img.getImage());
         setVisible(true);
+
+        actionListeners();
+
+    }
+
+    private void actionListeners(){
+        // Browse button
+        localDirBrowseButton.addActionListener(e -> {
+            File localDirPath = OperatingSystem.chooseLocalDirectory();
+            if(localDirPath != null) localDirTextField.setText(localDirPath.getAbsolutePath());
+        });
+
 
     }
 
@@ -143,6 +209,23 @@ public class GUI extends JFrame {
         log.append(text+"\n");
     }
 
+
+    private void addAction(TextAction action, int key, String text){
+        action.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(key, InputEvent.CTRL_DOWN_MASK));
+        action.putValue(AbstractAction.NAME, text);
+        jMenu.add(new JMenuItem(action));
+        popupMenu.add(new JMenuItem(action));
+    }
+
+
+    private void setPopup(JTextComponent... components){
+        if(components == null){
+            return;
+        }
+        for (JTextComponent tc : components) {
+            tc.setComponentPopupMenu(popupMenu);
+        }
+    }
 
     public void setHostname(String hostname){
         this.hostname = hostname;

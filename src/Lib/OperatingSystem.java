@@ -14,6 +14,11 @@ import static javax.swing.JOptionPane.showConfirmDialog;
 
 public class OperatingSystem {
 
+    private GUI gui;
+
+    public OperatingSystem(GUI gui){
+        this.gui = gui;
+    }
 
 
     public void runOnStartup(){
@@ -59,8 +64,7 @@ public class OperatingSystem {
         final SystemTray tray = SystemTray.getSystemTray();
 
         MenuItem settingsItem = new MenuItem("Settings");
-        //TODO: settingsItem opens the program with already defined settings
-        //settingsItem.addActionListener(e -> );
+        settingsItem.addActionListener(e -> gui.setVisible(true));
         MenuItem aboutItem = new MenuItem("About");
         //TODO: aboutItem opens a window displaying the program name, version number, and copyrights.
         //aboutItem.addActionListener(e -> );
@@ -101,7 +105,7 @@ public class OperatingSystem {
     }
 
 
-    public File chooseLocalDirectory(){
+    public static File chooseLocalDirectory(){
         File folderPath = new File("");
 
         JFileChooser chooser = new JFileChooser();
@@ -115,6 +119,7 @@ public class OperatingSystem {
         else {
             int option = showConfirmDialog(chooser, "Are you sure you want to cancel?");
             if(option == 1 || option == 2) return chooseLocalDirectory();
+            else folderPath = null;
         }
         return folderPath;
     }

@@ -21,13 +21,17 @@ public class Lib {
     private String remoteDirPath;
     private boolean isRunOnStartup;
 
+    private GUI gui;
 
     public Lib(String hostname, Integer portNumber){
-        os = new OperatingSystem();
+        this.gui = new GUI();
+        os = new OperatingSystem(gui);
         cloudDrive = new SynologyAPI(hostname, portNumber);
     }
 
     public Lib() throws IOException, InterruptedException {
+        this.gui = new GUI();
+
         if(isDatabase()){
             // If database is present
             // Open the database for reading and writing
@@ -35,7 +39,7 @@ public class Lib {
             this.database = readDatabase();
             // Don't show the GUI (unless the user clicks on settings from the system tray),
             // and starts running in the background (inside the system tray)
-            this.os = new OperatingSystem();
+            this.os = new OperatingSystem(gui);
             os.runInBackground();
             // Save each of this.database key's value inside an instance variable, whose name is same as the key's
             collectDatabaseVars();

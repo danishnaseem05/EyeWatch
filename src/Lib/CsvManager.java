@@ -32,12 +32,12 @@ public class CsvManager {
 
             GUI.appendLog("Success: Settings Saved.");
             System.out.println("Success: Settings Saved.");
-            JOptionPane.showMessageDialog(null, "Settings saved.");
+            //JOptionPane.showMessageDialog(null, "Settings saved.");
 
         } catch(Exception e){
-            GUI.appendLog("Success: Settings cannot be saved.");
-            System.out.println("Success: Settings cannot be saved.");
-            JOptionPane.showMessageDialog(null, "Error: Settings cannot be saved.");
+            GUI.appendLog("Error: Settings cannot be saved. Check the filepath and Try Again.");
+            System.out.println("Error: Settings cannot be saved. Check the filepath and Try Again.");
+            //JOptionPane.showMessageDialog(null, "Error: Settings cannot be saved.");
         }
     }
 
@@ -52,7 +52,7 @@ public class CsvManager {
                 database.put(result[0], result[1]);
             }
         } catch(Exception e){
-            e.printStackTrace();
+            System.out.println("Error: Could not read from the CSV file. Check the filepath and Try Again.");
         }
         return database;
     }
@@ -61,21 +61,52 @@ public class CsvManager {
     public void createCsv(String filepath, String filenameNoExt){
         try{
             String full_path = filepath + File.separator + filenameNoExt + ".csv";
-            GUI.appendLog("CSV Absolute file Path: " + full_path);
+            //GUI.appendLog("CSV Absolute file Path: " + full_path);
             System.out.println("CSV Absolute file Path: " + full_path);
             File myCSV = new File(full_path);
             if(myCSV.createNewFile()){
-                GUI.appendLog("CSV File created: " + myCSV.getName());
+                //GUI.appendLog("CSV File created: " + myCSV.getName());
                 System.out.println("CSV File created: " + myCSV.getName());
+                writeToNewCSVFile(full_path);
             } else{
-                GUI.appendLog("CSV File already exists.");
+                //GUI.appendLog("CSV File already exists.");
                 System.out.println("CSV File already exists.");
             }
         } catch (IOException e){
-            GUI.appendLog("Error: CSV file could not be created.");
-            System.out.println("Error: CSV file could not be created.");
+            //GUI.appendLog("Error: CSV file could not be created.");
+            System.out.println("Error: CSV file could not be created. Check the filepath and Try Again.");
         }
 
+    }
+
+
+    private void writeToNewCSVFile(String fullFilePath){
+        try{
+            FileWriter myFileWriter = new FileWriter(fullFilePath, false);
+            BufferedWriter myBuffWriter = new BufferedWriter(myFileWriter);
+            PrintWriter myPrintWriter = new PrintWriter(myBuffWriter);
+
+            myPrintWriter.println("localDirPath," + "*" + "\n" +
+                    "hostnameOrIP," + "*" + "\n" +
+                    "portNumber," + "*" + "\n" +
+                    "username," + "*" + "\n" +
+                    "password," + "*" + "\n" +
+                    "remoteDirPath," + "*" + "\n" +
+                    "otp_code," + "*" + "\n" +
+                    "isRunOnStartup," + "*");
+
+            myPrintWriter.flush();
+            myPrintWriter.close();
+
+            //GUI.appendLog("Success: Settings Saved.");
+            System.out.println("Success: Wrote to new CSV file.");
+            //JOptionPane.showMessageDialog(null, "Settings saved.");
+
+        } catch(Exception e){
+            //GUI.appendLog("Error: Settings cannot be saved.");
+            System.out.println("Error: Could not write to new CSV file. Check the filepath and Try Again.");
+            //JOptionPane.showMessageDialog(null, "Error: Settings cannot be saved.");
+        }
     }
 
 
