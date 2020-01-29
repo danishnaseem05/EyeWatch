@@ -340,6 +340,7 @@ public class GUI extends JFrame {
         }
     }
 
+
     public void setHostname(String hostname){
         this.hostname = hostname;
     }
