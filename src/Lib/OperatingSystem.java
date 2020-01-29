@@ -84,7 +84,7 @@ public class OperatingSystem {
         }
     }
 
-
+    // TODO: add this method to a new Thread somehow
     public void watchLocalDirectoryState(String path) throws IOException, InterruptedException {
         Path dir = Paths.get(path);
         WatchService watcher = dir.getFileSystem().newWatchService();
