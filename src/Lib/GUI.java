@@ -15,6 +15,9 @@ import java.util.GregorianCalendar;
 
 public class GUI extends JFrame {
 
+    //TODO: add fileJMenu and add save log as its menu item. Save log would
+    // enable the user to save the entire text within the log text area.
+
 
     // GUI Components
     protected static JTextArea log = new JTextArea();
