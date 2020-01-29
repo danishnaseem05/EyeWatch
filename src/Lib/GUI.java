@@ -17,14 +17,14 @@ public class GUI extends JFrame {
 
 
     // GUI Components
-    static JTextArea log = new JTextArea();
+    protected static JTextArea log = new JTextArea();
 
     private JMenu editJMenu = new JMenu("Edit");
     private JMenu helpJMenu = new JMenu("Help");
 
     private JMenuItem aboutJMenuItem = new JMenuItem("About");
 
-    private JMenuBar jMenuBar = new JMenuBar();
+    private JMenuBar jMenuBar    = new JMenuBar();
     private JPopupMenu popupMenu = new JPopupMenu();
 
     private JTextArea descriptionTextArea  = new JTextArea("Scans the remote directory for files that exist in the local directory. If they exist" +
