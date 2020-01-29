@@ -240,13 +240,9 @@ public class GUI extends JFrame {
 
                 // monitoring local directory in a new thread
                 WatchLocalDirectoryStateThread watchLocalDirThread = new WatchLocalDirectoryStateThread(this, getLocalDirPath());
-                try {
-                    watchLocalDirThread.start();
-                } finally {
-                    csvManager.saveSetting(getLocalDirPath(), getHostname(), getPortNumber(), getUsername(), getPassword().toString(), getRemoteDirPath(), otp_code, getRunOnStartupCheckbox().toString(), databseFullFilePath);
-                }
+                watchLocalDirThread.start();
 
-
+                csvManager.saveSetting(getLocalDirPath(), getHostname(), getPortNumber(), getUsername(), getPassword().toString(), getRemoteDirPath(), otp_code, getRunOnStartupCheckbox().toString(), databseFullFilePath);
             }
         });
 

@@ -104,22 +104,16 @@ public class OperatingSystem {
                 System.out.println("System Error: Invalid local directory path entered.");
                 JOptionPane.showMessageDialog(gui, "Invalid local directory path entered.", "System Error", JOptionPane.ERROR_MESSAGE);
                 //ex.printStackTrace();
-            } catch (InterruptedException ex) {
-                appendLog("System Error: Invalid local directory path entered.");
-                System.out.println("System Error: Invalid local directory path entered.");
-                JOptionPane.showMessageDialog(gui, "Invalid local directory path entered.", "System Error", JOptionPane.ERROR_MESSAGE);
-                //ex.printStackTrace();
             }
         }
 
 
-        public void watchLocalDirectoryState(String path) throws IOException, InterruptedException {
+        public void watchLocalDirectoryState(String path) throws IOException{
             Path dir = Paths.get(path);
             WatchService watcher = dir.getFileSystem().newWatchService();
             WatchKey watchKey = dir.register(watcher, ENTRY_CREATE, ENTRY_MODIFY);
 
             while(true) {
-                //watchKey = watcher.poll(10, TimeUnit.MINUTES);
                 watchKey.pollEvents().forEach(event -> {
 
                     String e = dir.resolve((Path) event.context()).toString();
@@ -142,7 +136,6 @@ public class OperatingSystem {
                     // and keep calling itself (the same Lib.java method) after sleep(10 minutes).
 
                 });
-                //watchKey.reset();
             }
         }
 
