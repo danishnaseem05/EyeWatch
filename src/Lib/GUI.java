@@ -189,6 +189,7 @@ public class GUI extends JFrame {
         setIconImage(img.getImage());
         setVisible(true);
 
+        // Listen to the button the button and if clicked, respond back with an action (or call a method in this case)
         actionListeners();
 
     }
