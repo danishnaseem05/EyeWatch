@@ -53,6 +53,20 @@ public class GUI extends JFrame {
 
     JCheckBox runOnStartupCheckBox = new JCheckBox("Run on Startup");
 
+    JPanel flow2Panel   = new JPanel (new FlowLayout (FlowLayout.CENTER));
+    JPanel flow3Panel   = new JPanel (new FlowLayout (FlowLayout.CENTER));
+    JPanel flow4Panel   = new JPanel (new FlowLayout (FlowLayout.LEFT));
+    JPanel flow5Panel   = new JPanel (new FlowLayout (FlowLayout.CENTER));
+    JPanel flow6Panel   = new JPanel (new FlowLayout (FlowLayout.CENTER));
+    JPanel flow7Panel   = new JPanel (new FlowLayout (FlowLayout.LEFT));
+    JPanel flow8Panel   = new JPanel (new FlowLayout (FlowLayout.LEFT));
+    JPanel flow9Panel   = new JPanel (new FlowLayout (FlowLayout.RIGHT));
+    JPanel flow10Panel  = new JPanel (new FlowLayout (FlowLayout.CENTER));
+    JPanel flow11Panel  = new JPanel (new FlowLayout (FlowLayout.LEFT));
+    JPanel flowOtpPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+
+    JPanel gridPanel  = new JPanel(new GridLayout(11,6));
+
     // Instance Variables
     private String hostname;
     private Integer portNumber;
@@ -69,20 +83,6 @@ public class GUI extends JFrame {
         this.password = "";
         this.runOnStartupCheckbox = false;
 
-        JPanel flow2Panel  = new JPanel (new FlowLayout (FlowLayout.CENTER));
-        JPanel flow3Panel  = new JPanel (new FlowLayout (FlowLayout.CENTER));
-        JPanel flow4Panel  = new JPanel (new FlowLayout (FlowLayout.LEFT));
-        JPanel flow5Panel  = new JPanel (new FlowLayout (FlowLayout.CENTER));
-        JPanel flow6Panel  = new JPanel (new FlowLayout (FlowLayout.CENTER));
-        JPanel flow7Panel  = new JPanel (new FlowLayout (FlowLayout.LEFT));
-        JPanel flow8Panel  = new JPanel (new FlowLayout (FlowLayout.LEFT));
-        JPanel flow9Panel  = new JPanel (new FlowLayout (FlowLayout.RIGHT));
-        JPanel flow10Panel = new JPanel (new FlowLayout (FlowLayout.CENTER));
-        JPanel flow11Panel = new JPanel (new FlowLayout (FlowLayout.LEFT));
-        JPanel flowOtpPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-
-        JPanel gridPanel  = new JPanel(new GridLayout(11,6));
-
         addActionForEditJMenu(new DefaultEditorKit.CutAction(), KeyEvent.VK_X,  "Cut");
         addActionForEditJMenu(new DefaultEditorKit.CutAction(), KeyEvent.VK_C,  "Copy");
         addActionForEditJMenu(new DefaultEditorKit.CutAction(), KeyEvent.VK_V,  "Paste");
@@ -97,70 +97,18 @@ public class GUI extends JFrame {
 
         // Setting Log JTextArea components
         settingLogComponents(border);
-
-
+        
         // Setting ToolTipText
         settingToolTipText();
 
         // Setting descriptionTextArea Components
         settingDescriptionTextAreaComponents(border);
 
+        // managing Flow Panels
+        managingFlowPanels();
 
-        flow2Panel.add(emptySpaceLabel);
-
-        //Local Directory
-        flow3Panel.add(localDirLabel);
-        flow4Panel.add(localDirTextField);
-        flow4Panel.add(localDirBrowseButton);
-
-        flow5Panel.add(emptySpaceLabel);
-
-        // Remote Directory
-        flow6Panel.add(remoteDirLabel);
-
-        flow7Panel.add(hostOrIPLabel);
-        flow7Panel.add(hostOrIPTextField);
-        flow7Panel.add(Box.createHorizontalStrut(37));
-        flow7Panel.add(HTTPSPortNumLabel);
-        flow7Panel.add(HTTPSPortNumTextField);
-
-        flow8Panel.add(usernameLabel);
-        flow8Panel.add(Box.createHorizontalStrut(72));
-        flow8Panel.add(usernameTextField);
-        flow8Panel.add(Box.createHorizontalStrut(38));
-        flow8Panel.add(passwordLabel);
-        flow8Panel.add(passwordField);
-
-        flow9Panel.add(remoteDirTextField);
-        flow9Panel.add(Box.createHorizontalStrut(1));
-
-        flow10Panel.add(emptySpaceLabel);
-        // run on Startup Checkbox
-        flow11Panel.add(runOnStartupCheckBox);
-
-        flow11Panel.add(Box.createHorizontalStrut(296));
-
-        // Done Button
-        flow11Panel.add(doneButton);
-
-        // otpCode
-        flowOtpPanel.add(otpCodeLabel);
-        flowOtpPanel.add(otpCodeTextField);
-        flowOtpPanel.add(Box.createHorizontalStrut(1));
-
-        gridPanel.add(flow2Panel);
-        gridPanel.add(flow3Panel);
-        gridPanel.add(flow4Panel);
-        gridPanel.add(flow5Panel);
-        gridPanel.add(flow6Panel);
-        gridPanel.add(flow7Panel);
-        gridPanel.add(flow8Panel);
-        gridPanel.add(flowOtpPanel);
-        gridPanel.add(flow9Panel);
-        gridPanel.add(flow10Panel);
-        gridPanel.add(flow11Panel);
-
-        gridPanel.setBackground(Color.ORANGE);
+        // managing Grid Panel(s)
+        managingGridPanels();
 
         jMenuBar.add(editJMenu);
         jMenuBar.add(helpJMenu);
@@ -220,6 +168,67 @@ public class GUI extends JFrame {
         descriptionTextArea.setBorder(BorderFactory.createCompoundBorder(border, BorderFactory.createEmptyBorder(10, 10, 10, 10)));
     }
 
+
+    private void managingFlowPanels(){
+        flow2Panel.add(emptySpaceLabel);
+
+        //Local Directory
+        flow3Panel.add(localDirLabel);
+        flow4Panel.add(localDirTextField);
+        flow4Panel.add(localDirBrowseButton);
+
+        flow5Panel.add(emptySpaceLabel);
+
+        // Remote Directory
+        flow6Panel.add(remoteDirLabel);
+
+        flow7Panel.add(hostOrIPLabel);
+        flow7Panel.add(hostOrIPTextField);
+        flow7Panel.add(Box.createHorizontalStrut(37));
+        flow7Panel.add(HTTPSPortNumLabel);
+        flow7Panel.add(HTTPSPortNumTextField);
+
+        flow8Panel.add(usernameLabel);
+        flow8Panel.add(Box.createHorizontalStrut(72));
+        flow8Panel.add(usernameTextField);
+        flow8Panel.add(Box.createHorizontalStrut(38));
+        flow8Panel.add(passwordLabel);
+        flow8Panel.add(passwordField);
+
+        flow9Panel.add(remoteDirTextField);
+        flow9Panel.add(Box.createHorizontalStrut(1));
+
+        flow10Panel.add(emptySpaceLabel);
+        // run on Startup Checkbox
+        flow11Panel.add(runOnStartupCheckBox);
+
+        flow11Panel.add(Box.createHorizontalStrut(296));
+
+        // Done Button
+        flow11Panel.add(doneButton);
+
+        // otpCode
+        flowOtpPanel.add(otpCodeLabel);
+        flowOtpPanel.add(otpCodeTextField);
+        flowOtpPanel.add(Box.createHorizontalStrut(1));
+    }
+
+
+    private void managingGridPanels(){
+        gridPanel.add(flow2Panel);
+        gridPanel.add(flow3Panel);
+        gridPanel.add(flow4Panel);
+        gridPanel.add(flow5Panel);
+        gridPanel.add(flow6Panel);
+        gridPanel.add(flow7Panel);
+        gridPanel.add(flow8Panel);
+        gridPanel.add(flowOtpPanel);
+        gridPanel.add(flow9Panel);
+        gridPanel.add(flow10Panel);
+        gridPanel.add(flow11Panel);
+
+        gridPanel.setBackground(Color.ORANGE);
+    }
 
     private void actionListeners(){
         // Browse button
