@@ -1,6 +1,5 @@
 package Lib;
 
-import javafx.event.Event;
 
 import javax.swing.*;
 import java.awt.*;
