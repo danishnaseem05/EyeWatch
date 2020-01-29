@@ -18,7 +18,11 @@ public class GUI extends JFrame {
     // GUI Components
     static JTextArea log = new JTextArea();
 
-    private JMenu jMenu = new JMenu("Edit");
+    private JMenu editJMenu = new JMenu("Edit");
+    private JMenu helpJMenu = new JMenu("Help");
+
+    private JMenuItem aboutJMenuItem = new JMenuItem("About");
+
     private JMenuBar jMenuBar = new JMenuBar();
     private JPopupMenu popupMenu = new JPopupMenu();
 
@@ -79,42 +83,28 @@ public class GUI extends JFrame {
 
         JPanel gridPanel  = new JPanel(new GridLayout(11,6));
 
-        addAction(new DefaultEditorKit.CutAction(), KeyEvent.VK_X,  "Cut");
-        addAction(new DefaultEditorKit.CutAction(), KeyEvent.VK_C,  "Copy");
-        addAction(new DefaultEditorKit.CutAction(), KeyEvent.VK_V,  "Paste");
+        addActionForEditJMenu(new DefaultEditorKit.CutAction(), KeyEvent.VK_X,  "Cut");
+        addActionForEditJMenu(new DefaultEditorKit.CutAction(), KeyEvent.VK_C,  "Copy");
+        addActionForEditJMenu(new DefaultEditorKit.CutAction(), KeyEvent.VK_V,  "Paste");
 
         setPopup(log, localDirTextField, remoteDirTextField, hostOrIPTextField, HTTPSPortNumTextField, usernameTextField, passwordField);
+
+        helpJMenu.add(aboutJMenuItem);
 
         Color jFrameColor = this.getBackground();
         //System.out.println(jFrameColor);
         Border border = BorderFactory.createLineBorder(new Color(130, 130, 130));
 
-        log.setEditable(false);
-        log.setLineWrap(true);
-        log.setRows(10);
-        log.setForeground(Color.BLUE);
-        log.setBorder(BorderFactory.createCompoundBorder(border, BorderFactory.createEmptyBorder(10, 10, 10, 10)));
-
-        localDirBrowseButton.setToolTipText("Open local file explorer");
-        localDirTextField.setToolTipText("Enter path to local directory");
-        remoteDirTextField.setToolTipText("Enter path to remote directory");
-        hostOrIPTextField.setToolTipText("Enter hostname or IP address");
-        HTTPSPortNumTextField.setToolTipText("Enter a HTTPS port number");
-        usernameTextField.setToolTipText("Enter your username");
-        passwordField.setToolTipText("Enter your password");
-        runOnStartupCheckBox.setToolTipText("Start the program on startup");
-        doneButton.setToolTipText("Run the program and save the settings");
-
-        descriptionTextArea.setFont(descriptionTextArea.getFont().deriveFont(Font.BOLD, descriptionTextArea.getFont().getSize()));
-        descriptionTextArea.setBackground(Color.BLACK);
-        descriptionTextArea.setForeground(Color.WHITE);
-        descriptionTextArea.setEditable(false);
-        descriptionTextArea.setRows(3);
-        descriptionTextArea.setLineWrap(true);
-        descriptionTextArea.setWrapStyleWord(true);
+        // Setting Log JTextArea components
+        settingLogComponents(border);
 
 
-        descriptionTextArea.setBorder(BorderFactory.createCompoundBorder(border, BorderFactory.createEmptyBorder(10, 10, 10, 10)));
+        // Setting ToolTipText
+        settingToolTipText();
+
+        // Setting descriptionTextArea Components
+        settingDescriptionTextAreaComponents(border);
+
 
         flow2Panel.add(emptySpaceLabel);
 
@@ -172,7 +162,8 @@ public class GUI extends JFrame {
 
         gridPanel.setBackground(Color.ORANGE);
 
-        jMenuBar.add(jMenu);
+        jMenuBar.add(editJMenu);
+        jMenuBar.add(helpJMenu);
 
         setJMenuBar(jMenuBar);
 
@@ -195,6 +186,41 @@ public class GUI extends JFrame {
 
     }
 
+
+    private void settingToolTipText(){
+        localDirBrowseButton.setToolTipText("Open local file explorer");
+        localDirTextField.setToolTipText("Enter path to local directory");
+        remoteDirTextField.setToolTipText("Enter path to remote directory");
+        hostOrIPTextField.setToolTipText("Enter hostname or IP address");
+        HTTPSPortNumTextField.setToolTipText("Enter a HTTPS port number");
+        usernameTextField.setToolTipText("Enter your username");
+        passwordField.setToolTipText("Enter your password");
+        runOnStartupCheckBox.setToolTipText("Start the program on startup");
+        doneButton.setToolTipText("Run the program and save the settings");
+    }
+
+
+    private void settingLogComponents(Border border){
+        log.setEditable(false);
+        log.setLineWrap(true);
+        log.setRows(10);
+        log.setForeground(Color.BLUE);
+        log.setBorder(BorderFactory.createCompoundBorder(border, BorderFactory.createEmptyBorder(10, 10, 10, 10)));
+    }
+
+
+    private void settingDescriptionTextAreaComponents(Border border) {
+        descriptionTextArea.setFont(descriptionTextArea.getFont().deriveFont(Font.BOLD, descriptionTextArea.getFont().getSize()));
+        descriptionTextArea.setBackground(Color.BLACK);
+        descriptionTextArea.setForeground(Color.WHITE);
+        descriptionTextArea.setEditable(false);
+        descriptionTextArea.setRows(3);
+        descriptionTextArea.setLineWrap(true);
+        descriptionTextArea.setWrapStyleWord(true);
+        descriptionTextArea.setBorder(BorderFactory.createCompoundBorder(border, BorderFactory.createEmptyBorder(10, 10, 10, 10)));
+    }
+
+
     private void actionListeners(){
         // Browse button
         localDirBrowseButton.addActionListener(e -> {
@@ -202,6 +228,10 @@ public class GUI extends JFrame {
             if(localDirPath != null) localDirTextField.setText(localDirPath.getAbsolutePath());
         });
 
+        // About menu item
+        aboutJMenuItem.addActionListener(e -> {
+            aboutWindow();
+        });
 
     }
 
@@ -283,10 +313,10 @@ public class GUI extends JFrame {
     }
 
 
-    private void addAction(TextAction action, int key, String text){
+    private void addActionForEditJMenu(TextAction action, int key, String text){
         action.putValue(AbstractAction.ACCELERATOR_KEY, KeyStroke.getKeyStroke(key, InputEvent.CTRL_DOWN_MASK));
         action.putValue(AbstractAction.NAME, text);
-        jMenu.add(new JMenuItem(action));
+        editJMenu.add(new JMenuItem(action));
         popupMenu.add(new JMenuItem(action));
     }
 
