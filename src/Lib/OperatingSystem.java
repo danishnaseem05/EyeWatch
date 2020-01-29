@@ -97,8 +97,6 @@ public class OperatingSystem {
         public void run(){
             try {
                 watchLocalDirectoryState(localDirPath);
-                appendLog("Started monitoring: " + localDirPath);
-                System.out.println("Started monitoring: " + localDirPath);
             } catch (IOException ex) {
                 appendLog("System Error: Invalid local directory path entered.");
                 System.out.println("System Error: Invalid local directory path entered.");
@@ -112,6 +110,9 @@ public class OperatingSystem {
             Path dir = Paths.get(path);
             WatchService watcher = dir.getFileSystem().newWatchService();
             WatchKey watchKey = dir.register(watcher, ENTRY_CREATE, ENTRY_MODIFY);
+
+            appendLog("Started monitoring: " + localDirPath);
+            System.out.println("Started monitoring: " + localDirPath);
 
             while(true) {
                 watchKey.pollEvents().forEach(event -> {

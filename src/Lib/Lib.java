@@ -91,7 +91,10 @@ public class Lib {
                     System.out.println("ERROR: Database directory faced an error while trying to hide it.");
                 }
             }
-        } else System.out.println("ERROR: Database already been created");
+        } else {
+            GUI.appendLog("Database already exists");
+            System.out.println("Database already exists");
+        }
     }
 
 

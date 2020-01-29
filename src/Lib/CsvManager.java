@@ -1,6 +1,7 @@
 package Lib;
 
 
+import javax.swing.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -13,7 +14,6 @@ public class CsvManager {
 
     public void saveSetting(String localDirPath, String hostnameOrIP, String portNumber, String username, String password,
                             String remoteDirPath, String otp_code, String isRunOnStartup, String fullFilePath){
-
         try{
             FileWriter myFileWriter = new FileWriter(fullFilePath, false);
             BufferedWriter myBuffWriter = new BufferedWriter(myFileWriter);
@@ -33,14 +33,15 @@ public class CsvManager {
 
             GUI.appendLog("Success: Settings Saved.");
             System.out.println("Success: Settings Saved.");
+            JOptionPane.showMessageDialog(null, "Settings saved.", "Success", JOptionPane.INFORMATION_MESSAGE);
             return;
-            //JOptionPane.showMessageDialog(null, "Settings saved.");
 
         } catch(Exception e){
-            GUI.appendLog("Error: Settings cannot be saved. Check the filepath and Try Again.");
-            System.out.println("Error: Settings cannot be saved. Check the filepath and Try Again.");
+            GUI.appendLog("Unable to locate Database Error: Settings cannot be saved. Check the filepath and make sure the Database isn't open or been deleted then Try Again. If the problem persists, restart the program.");
+            System.out.println("Unable to locate Database Error: Settings cannot be saved. Check the filepath and make sure the Database isn't open or been deleted then Try Again. If the problem persist restart the program.");
+            JOptionPane.showMessageDialog(null, "Settings cannot be saved. Check the filepath and make sure the Database isn't open or been deleted then Try Again. If the problem persists, restart the program.",
+                    "Unable to Locate Database Error", JOptionPane.ERROR_MESSAGE);
             return;
-            //JOptionPane.showMessageDialog(null, "Error: Settings cannot be saved.");
         }
     }
 
@@ -68,11 +69,11 @@ public class CsvManager {
     public void createCsv(String filepath, String filenameNoExt){
         try{
             String full_path = filepath + File.separator + filenameNoExt + ".csv";
-            //GUI.appendLog("CSV Absolute file Path: " + full_path);
+            GUI.appendLog("Attempting to create new Database at: " + full_path);
             System.out.println("CSV Absolute file Path: " + full_path);
             File myCSV = new File(full_path);
             if(myCSV.createNewFile()){
-                //GUI.appendLog("CSV File created: " + myCSV.getName());
+                GUI.appendLog("Database Successfully Created");
                 System.out.println("CSV File created: " + myCSV.getName());
                 writeToNewCSVFile(full_path);
             } else{
@@ -80,8 +81,8 @@ public class CsvManager {
                 System.out.println("CSV File already exists.");
             }
         } catch (IOException e){
-            //GUI.appendLog("Error: CSV file could not be created.");
-            System.out.println("Error: CSV file could not be created. Check the filepath and Try Again.");
+            GUI.appendLog("Error: Database could not be created");
+            System.out.println("Error: Database could not be created. Check the filepath and Try Again.");
         }
 
     }

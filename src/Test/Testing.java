@@ -22,7 +22,7 @@ class Testing {
         //testing.http_ClientTest();
         //testing.synologyAPITest();
         //testing.csvManagerTest();
-        //testing.libStaticMethodsTest();
+        testing.libStaticMethodsTest();
         GUI gui = testing.GUITest("./.EyeWatch/UserSetting.csv");
         //testing.operatingSystemTest(gui);
 
