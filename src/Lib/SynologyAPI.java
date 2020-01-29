@@ -125,8 +125,8 @@ public class SynologyAPI {
         }
         // CHECK: Does requested directory or file path exist
         else if(errCode.equals(408)){
-            GUI.appendLog("Synology System Error 408: Invalid directory or file path entered.");
-            System.out.println("Synology System Error 408: Invalid directory or file path entered.");
+            GUI.appendLog("Synology System Error 408: Invalid remote directory path entered.");
+            System.out.println("Synology System Error 408: Invalid remote directory path entered.");
             // Show the popup
             String err_msg = "Invalid directory or file path entered.";
             JOptionPane.showMessageDialog(new JFrame(), err_msg, "Synology System Error 408", JOptionPane.ERROR_MESSAGE);

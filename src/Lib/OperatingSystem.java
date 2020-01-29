@@ -88,25 +88,31 @@ public class OperatingSystem {
     public void watchLocalDirectoryState(String path) throws IOException, InterruptedException {
         Path dir = Paths.get(path);
         WatchService watcher = dir.getFileSystem().newWatchService();
-        dir.register(watcher, ENTRY_CREATE, ENTRY_MODIFY);
+        WatchKey watchKey = dir.register(watcher, ENTRY_CREATE, ENTRY_MODIFY);
 
-        WatchKey watchKey;
         while(true) {
-            watchKey = watcher.poll(10, TimeUnit.MINUTES);
-            if(watchKey != null){
-                watchKey.pollEvents().stream().forEach(event -> {
-                    String e = event.context().toString();
-                    GUI.appendLog(e);
-                    System.out.println(e);
+            //watchKey = watcher.poll(10, TimeUnit.MINUTES);
+            watchKey.pollEvents().forEach(event -> {
 
-                    //TODO: make the event call the program(which adds the filename
-                    // to the LinkedList, and access the remote directory to look for those files).
-                    // If the files exist, delete those files from the local directory, otherwise just
-                    // return and wait for another event call from here.
+                String e = event.context().toString();
+                WatchEvent.Kind<?> k = event.kind();
+
+                if(k.toString().equals("ENTRY_CREATE")){
+                    GUI.appendLog(e + " has been CREATED");
+                    System.out.println(e + " has been CREATED");
+                }
+                else if(k.toString().equals("ENTRY_MODIFY")) {
+                    GUI.appendLog(e + " has been MODIFIED");
+                    System.out.println(e + " has been MODIFIED");
+                }
+
+                //TODO: make the event call the program(which adds the filename
+                // to the LinkedList, and access the remote directory to look for those files).
+                // If the files exist, delete those files from the local directory, otherwise just
+                // return and wait for another event call from here.
 
                 });
-            }
-            watchKey.reset();
+            //watchKey.reset();
         }
     }
 

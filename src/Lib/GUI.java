@@ -11,6 +11,7 @@ import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.NoSuchFileException;
 import java.util.GregorianCalendar;
 
 public class GUI extends JFrame {
@@ -236,15 +237,21 @@ public class GUI extends JFrame {
                 CsvManager csvManager = new CsvManager();
                 String otp_code = getOtp_Code();
                 if(otp_code.length() == 0) otp_code = "*";
-                csvManager.saveSetting(getLocalDirPath(), getHostname(), getPortNumber(), getUsername(), getPassword().toString(), getRemoteDirPath(), otp_code, getRunOnStartupCheckbox().toString(), databseFullFilePath);
                 try {
+                    os.watchLocalDirectoryState(getLocalDirPath());
+                    csvManager.saveSetting(getLocalDirPath(), getHostname(), getPortNumber(), getUsername(), getPassword().toString(), getRemoteDirPath(), otp_code, getRunOnStartupCheckbox().toString(), databseFullFilePath);
                     appendLog("Started monitoring: " + getLocalDirPath());
                     System.out.println("Started monitoring: " + getLocalDirPath());
-                    os.watchLocalDirectoryState(getLocalDirPath());
                 } catch (IOException ex) {
-                    ex.printStackTrace();
+                    appendLog("System Error: Invalid local directory path entered.");
+                    System.out.println("System Error: Invalid local directory path entered.");
+                    JOptionPane.showMessageDialog(this, "Invalid local directory path entered.", "System Error", JOptionPane.ERROR_MESSAGE);
+                    //ex.printStackTrace();
                 } catch (InterruptedException ex) {
-                    ex.printStackTrace();
+                    appendLog("System Error: Invalid local directory path entered.");
+                    System.out.println("System Error: Invalid local directory path entered.");
+                    JOptionPane.showMessageDialog(this,"Invalid local directory path entered.", "System Error", JOptionPane.ERROR_MESSAGE);
+                    //ex.printStackTrace();
                 }
             }
         });
@@ -387,13 +394,6 @@ public class GUI extends JFrame {
             JOptionPane.showMessageDialog(this, "Remote Directory Path is empty", "Error", JOptionPane.ERROR_MESSAGE);
             return false;
         }
-        else if(portNumber.length() > 0) {
-            Boolean val = verifyInteger(portNumber);
-            if(val == false) {
-                JOptionPane.showMessageDialog(this, "Entered Port Number is not an Integer number. Please try again.", "Value Error", JOptionPane.ERROR_MESSAGE);
-                return false;
-            } else return true;
-        }
         else if(otp_code.length() > 0) {
             Boolean val = verifyInteger(otp_code);
             if(val == false){
@@ -401,6 +401,14 @@ public class GUI extends JFrame {
                 return false;
             } else return true;
         }
+        else if(portNumber.length() > 0) {
+            Boolean val = verifyInteger(portNumber);
+            if(val == false) {
+                JOptionPane.showMessageDialog(this, "Entered Port Number is not an Integer number. Please try again.", "Value Error", JOptionPane.ERROR_MESSAGE);
+                return false;
+            } else return true;
+        }
+
         else return true;
     }
 
