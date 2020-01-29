@@ -105,6 +105,7 @@ public class OperatingSystem {
                     GUI.appendLog(e + " has been MODIFIED");
                     System.out.println(e + " has been MODIFIED");
                 }
+                
 
                 //TODO: make the event call a method from Lib.java class (which adds the filenames
                 // from the local directory to a LinkedList, and accesses the remote directory
