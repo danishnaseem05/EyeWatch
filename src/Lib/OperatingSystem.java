@@ -106,10 +106,11 @@ public class OperatingSystem {
                     System.out.println(e + " has been MODIFIED");
                 }
 
-                //TODO: make the event call the program(which adds the filename
-                // to the LinkedList, and access the remote directory to look for those files).
-                // If the files exist, delete those files from the local directory, otherwise just
-                // return and wait for another event call from here.
+                //TODO: make the event call a method from Lib.java class (which adds the filenames
+                // from the local directory to the LinkedList, and accesses the remote directory
+                // to look for those files). If the files exist, delete those files from the local directory,
+                // otherwise just return. That method from Lib.java will be in a loop (with condition: until the local directory is empty)
+                // and keep calling itself (the same Lib.java method) after sleep(10 minutes).
 
                 });
             //watchKey.reset();
