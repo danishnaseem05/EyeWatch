@@ -38,7 +38,7 @@ public class GUI extends JFrame {
     private JLabel HTTPSPortNumLabel = new JLabel("HTTPS Port Number");
     private JLabel usernameLabel     = new JLabel("Username");
     private JLabel passwordLabel     = new JLabel("Password");
-    private JLabel otpCodeLabel          = new JLabel("2 Step Verification Code (optional)");
+    private JLabel otpCodeLabel      = new JLabel("2 Step Verification Code (optional)");
 
     private JTextField localDirTextField     = new JTextField(40);
     private JTextField remoteDirTextField    = new JTextField(47);
@@ -397,17 +397,16 @@ public class GUI extends JFrame {
             if(val == false) {
                 JOptionPane.showMessageDialog(this, "Entered Port Number is not an Integer number. Please try again.", "Value Error", JOptionPane.ERROR_MESSAGE);
                 return false;
-            }
+            } else return true;
         }
         else if(otp_code.length() > 0) {
             Boolean val = verifyInteger(otp_code);
             if(val == false){
                 JOptionPane.showMessageDialog(this, "Entered 2 Step Verification Code is not an Integer number. Please try again.", "Value Error", JOptionPane.ERROR_MESSAGE);
                 return false;
-            }
+            } else return true;
         }
-
-        return true;
+        else return true;
     }
 
 
