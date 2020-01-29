@@ -31,10 +31,12 @@ public class Http_Client {
 
     private static JSONObject processRequest(CloseableHttpResponse response) throws IOException, JSONException {
         // Get HttpResponse Status
+        GUI.appendLog(response.getStatusLine().toString());
         System.out.println(response.getStatusLine().toString());
 
         HttpEntity entity = response.getEntity();
         Header headers = entity.getContentType();
+        GUI.appendLog(headers.toString());
         System.out.println(headers);
 
         JSONObject result = null;
