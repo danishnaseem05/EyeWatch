@@ -74,13 +74,22 @@ public class Lib {
     public static void createNewDatabase(){
         CsvManager csvManager = new CsvManager();
         if(! isDatabase()){
-            File dir = new File("./.EyeWatch");
+            File dir = new File(".EyeWatch");
+            System.out.println(dir.getAbsolutePath());
             if(dir.exists()) csvManager.createCsv(dir.getAbsolutePath(), "UserSetting");
             else{
                 dir.mkdir();
-                csvManager.createCsv(dir.getAbsolutePath(), "UserSetting");
+                // Hide the created directory
+                String command= "cmd /C attrib +s +h " + "\"" + dir.getAbsolutePath() + "\"";
+                try{
+                    Runtime.getRuntime().exec(command);
+                    System.out.println("SUCCESS: Database Directory successfully hidden");
+                    csvManager.createCsv(dir.getAbsolutePath(), "UserSetting");
+                } catch (IOException e) {
+                    System.out.println("ERROR: Database directory faced an error while trying to hide it.");
+                }
             }
-        } else System.out.println("Error: Database already been created");
+        } else System.out.println("ERROR: Database already been created");
     }
 
 

@@ -19,9 +19,9 @@ class Testing {
         //testing.csvManagerTest();
         //testing.http_ClientTest();
         //testing.synologyAPITest();
-        GUI gui = testing.GUITest();
-        testing.operatingSystemTest(gui);
-        //testing.libStaticMethodsTest();
+        //GUI gui = testing.GUITest();
+        //testing.operatingSystemTest(gui);
+        testing.libStaticMethodsTest();
     }
 
 
