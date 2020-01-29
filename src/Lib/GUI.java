@@ -32,7 +32,7 @@ public class GUI extends JFrame {
     private JLabel HTTPSPortNumLabel = new JLabel("HTTPS Port Number");
     private JLabel usernameLabel     = new JLabel("Username");
     private JLabel passwordLabel     = new JLabel("Password");
-    private JLabel otpCodeLabel          = new JLabel("2 Step Verification Code");
+    private JLabel otpCodeLabel          = new JLabel("2 Step Verification Code (optional)");
 
     JTextField localDirTextField     = new JTextField(40);
     JTextField remoteDirTextField    = new JTextField(47);
