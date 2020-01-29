@@ -107,7 +107,7 @@ public class OperatingSystem {
                 }
 
                 //TODO: make the event call a method from Lib.java class (which adds the filenames
-                // from the local directory to the LinkedList, and accesses the remote directory
+                // from the local directory to a LinkedList, and accesses the remote directory
                 // to look for those files). If the files exist, delete those files from the local directory,
                 // otherwise just return. That method from Lib.java will be in a loop (with condition: until the local directory is empty)
                 // and keep calling itself (the same Lib.java method) after sleep(10 minutes).
