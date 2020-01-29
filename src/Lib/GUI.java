@@ -27,9 +27,9 @@ public class GUI extends JFrame {
     private JMenuBar jMenuBar    = new JMenuBar();
     private JPopupMenu popupMenu = new JPopupMenu();
 
-    private JTextArea descriptionTextArea  = new JTextArea("Scans the remote directory for files that exist in the local directory. If they exist" +
-            " in the remote directory, then they will be deleted from the local directory; otherwise the local directory will be monitored for any" +
-            " new or modified files, if so then another scan will run on the remote directory. If 2 STEP VERIFICATION is turned on for your Synology" +
+    private JTextArea descriptionTextArea  = new JTextArea("Scans the Synology remote directory for files that exist in the local directory. If they exist" +
+            " in the Synology remote directory, then they will be deleted from the local directory; otherwise the local directory will be monitored for any" +
+            " new or modified files, if so then another scan will run on the Synology remote directory. If 2 STEP VERIFICATION is turned on for your Synology" +
             " remote server, then it is REQUIRED.");
     private JLabel emptySpaceLabel   = new JLabel(" ");
     private JLabel localDirLabel     = new JLabel("<html><span style='font-size:11px'> Local Directory </span></html>");
