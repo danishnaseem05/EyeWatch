@@ -219,6 +219,7 @@ public class GUI extends JFrame {
         gridPanel.setBackground(Color.ORANGE);
     }
 
+    
     private void actionListeners(){
         // Browse button
         localDirBrowseButton.addActionListener(e -> {
@@ -251,6 +252,7 @@ public class GUI extends JFrame {
         });
 
     }
+
 
     // called in GUI.java and OperatingSystem.java
     protected static void aboutWindow(){
@@ -323,6 +325,7 @@ public class GUI extends JFrame {
             aboutFrame.setVisible(false);
         });
     }
+
 
     // called in various classes those need their errors, success or just processing to be logged and displayed to the user
     protected static void appendLog(String text){
