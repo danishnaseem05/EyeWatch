@@ -219,7 +219,7 @@ public class GUI extends JFrame {
         gridPanel.setBackground(Color.ORANGE);
     }
 
-    
+
     private void actionListeners(){
         // Browse button
         localDirBrowseButton.addActionListener(e -> {
