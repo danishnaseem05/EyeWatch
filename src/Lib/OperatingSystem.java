@@ -94,7 +94,7 @@ public class OperatingSystem {
             //watchKey = watcher.poll(10, TimeUnit.MINUTES);
             watchKey.pollEvents().forEach(event -> {
 
-                String e = event.context().toString();
+                String e = dir.resolve((Path) event.context()).toString();
                 WatchEvent.Kind<?> k = event.kind();
 
                 if(k.toString().equals("ENTRY_CREATE")){
