@@ -74,7 +74,7 @@ public class GUI extends JFrame {
     private String password;
     private Boolean runOnStartupCheckbox;
 
-    
+
     public GUI(){
         super("Eye Watch");
 
@@ -246,7 +246,7 @@ public class GUI extends JFrame {
     }
 
 
-    public static void aboutWindow(){
+    protected static void aboutWindow(){
         JFrame aboutFrame = new JFrame("About");
         aboutFrame.setBackground(Color.WHITE);
         Color aboutFrameColor = aboutFrame.getBackground();
@@ -318,7 +318,7 @@ public class GUI extends JFrame {
     }
 
 
-    public static void appendLog(String text){
+    protected static void appendLog(String text){
         log.append(text+"\n");
     }
 
