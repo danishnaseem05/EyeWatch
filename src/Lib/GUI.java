@@ -13,7 +13,7 @@ import java.io.File;
 import java.util.GregorianCalendar;
 
 public class GUI extends JFrame {
-    //TODO: add otp_code functionality too
+    
 
     // GUI Components
     static JTextArea log = new JTextArea();
@@ -39,33 +39,33 @@ public class GUI extends JFrame {
     private JLabel passwordLabel     = new JLabel("Password");
     private JLabel otpCodeLabel          = new JLabel("2 Step Verification Code (optional)");
 
-    JTextField localDirTextField     = new JTextField(40);
-    JTextField remoteDirTextField    = new JTextField(47);
-    JTextField hostOrIPTextField     = new JTextField(12);
-    JTextField HTTPSPortNumTextField = new JTextField(7);
-    JTextField usernameTextField     = new JTextField(12);
-    JTextField otpCodeTextField      = new JTextField(7);
+    private JTextField localDirTextField     = new JTextField(40);
+    private JTextField remoteDirTextField    = new JTextField(47);
+    private JTextField hostOrIPTextField     = new JTextField(12);
+    private JTextField HTTPSPortNumTextField = new JTextField(7);
+    private JTextField usernameTextField     = new JTextField(12);
+    private JTextField otpCodeTextField      = new JTextField(7);
 
-    JPasswordField passwordField = new JPasswordField(12);
+    private JPasswordField passwordField = new JPasswordField(12);
 
-    JButton localDirBrowseButton = new JButton("Browse");
-    JButton doneButton           = new JButton("Save Settings");
+    private JButton localDirBrowseButton = new JButton("Browse");
+    private JButton doneButton           = new JButton("Save Settings");
 
-    JCheckBox runOnStartupCheckBox = new JCheckBox("Run on Startup");
+    private JCheckBox runOnStartupCheckBox = new JCheckBox("Run on Startup");
 
-    JPanel flow2Panel   = new JPanel (new FlowLayout (FlowLayout.CENTER));
-    JPanel flow3Panel   = new JPanel (new FlowLayout (FlowLayout.CENTER));
-    JPanel flow4Panel   = new JPanel (new FlowLayout (FlowLayout.LEFT));
-    JPanel flow5Panel   = new JPanel (new FlowLayout (FlowLayout.CENTER));
-    JPanel flow6Panel   = new JPanel (new FlowLayout (FlowLayout.CENTER));
-    JPanel flow7Panel   = new JPanel (new FlowLayout (FlowLayout.LEFT));
-    JPanel flow8Panel   = new JPanel (new FlowLayout (FlowLayout.LEFT));
-    JPanel flow9Panel   = new JPanel (new FlowLayout (FlowLayout.RIGHT));
-    JPanel flow10Panel  = new JPanel (new FlowLayout (FlowLayout.CENTER));
-    JPanel flow11Panel  = new JPanel (new FlowLayout (FlowLayout.LEFT));
-    JPanel flowOtpPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+    private JPanel flow2Panel   = new JPanel (new FlowLayout (FlowLayout.CENTER));
+    private JPanel flow3Panel   = new JPanel (new FlowLayout (FlowLayout.CENTER));
+    private JPanel flow4Panel   = new JPanel (new FlowLayout (FlowLayout.LEFT));
+    private JPanel flow5Panel   = new JPanel (new FlowLayout (FlowLayout.CENTER));
+    private JPanel flow6Panel   = new JPanel (new FlowLayout (FlowLayout.CENTER));
+    private JPanel flow7Panel   = new JPanel (new FlowLayout (FlowLayout.LEFT));
+    private JPanel flow8Panel   = new JPanel (new FlowLayout (FlowLayout.LEFT));
+    private JPanel flow9Panel   = new JPanel (new FlowLayout (FlowLayout.RIGHT));
+    private JPanel flow10Panel  = new JPanel (new FlowLayout (FlowLayout.CENTER));
+    private JPanel flow11Panel  = new JPanel (new FlowLayout (FlowLayout.LEFT));
+    private JPanel flowOtpPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
 
-    JPanel gridPanel  = new JPanel(new GridLayout(11,6));
+    private JPanel gridPanel  = new JPanel(new GridLayout(11,6));
 
     // Instance Variables
     private String hostname;
@@ -97,7 +97,7 @@ public class GUI extends JFrame {
 
         // Setting Log JTextArea components
         settingLogComponents(border);
-        
+
         // Setting ToolTipText
         settingToolTipText();
 
