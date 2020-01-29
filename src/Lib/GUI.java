@@ -13,7 +13,7 @@ import java.io.File;
 import java.util.GregorianCalendar;
 
 public class GUI extends JFrame {
-    
+
 
     // GUI Components
     static JTextArea log = new JTextArea();
@@ -74,6 +74,7 @@ public class GUI extends JFrame {
     private String password;
     private Boolean runOnStartupCheckbox;
 
+    
     public GUI(){
         super("Eye Watch");
 
