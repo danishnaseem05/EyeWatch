@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 
+import Lib.OperatingSystem.*;
+
 public class Lib {
 
     OperatingSystem os;
@@ -50,8 +52,8 @@ public class Lib {
             //closeDatabase();
             // Then calls the respected methods, passing those variables as arguments
             // First method will be to start tracking the local dir
-            os.watchLocalDirectoryState(localDirPath);
-
+            WatchLocalDirectoryStateThread watchLocalDirectoryStateThread = new WatchLocalDirectoryStateThread(gui, localDirPath);
+            watchLocalDirectoryStateThread.start();
             // When the user clicks on settings on the program running in the system tray, the program initializes a GUI, already filled with
             // the information that was collected inside the variables
 

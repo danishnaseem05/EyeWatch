@@ -10,9 +10,9 @@ import java.awt.*;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.io.File;
-import java.io.IOException;
-import java.nio.file.NoSuchFileException;
 import java.util.GregorianCalendar;
+
+import Lib.OperatingSystem.*;
 
 public class GUI extends JFrame {
 
@@ -237,22 +237,16 @@ public class GUI extends JFrame {
                 CsvManager csvManager = new CsvManager();
                 String otp_code = getOtp_Code();
                 if(otp_code.length() == 0) otp_code = "*";
+
+                // monitoring local directory in a new thread
+                WatchLocalDirectoryStateThread watchLocalDirThread = new WatchLocalDirectoryStateThread(this, getLocalDirPath());
                 try {
-                    os.watchLocalDirectoryState(getLocalDirPath());
+                    watchLocalDirThread.start();
+                } finally {
                     csvManager.saveSetting(getLocalDirPath(), getHostname(), getPortNumber(), getUsername(), getPassword().toString(), getRemoteDirPath(), otp_code, getRunOnStartupCheckbox().toString(), databseFullFilePath);
-                    appendLog("Started monitoring: " + getLocalDirPath());
-                    System.out.println("Started monitoring: " + getLocalDirPath());
-                } catch (IOException ex) {
-                    appendLog("System Error: Invalid local directory path entered.");
-                    System.out.println("System Error: Invalid local directory path entered.");
-                    JOptionPane.showMessageDialog(this, "Invalid local directory path entered.", "System Error", JOptionPane.ERROR_MESSAGE);
-                    //ex.printStackTrace();
-                } catch (InterruptedException ex) {
-                    appendLog("System Error: Invalid local directory path entered.");
-                    System.out.println("System Error: Invalid local directory path entered.");
-                    JOptionPane.showMessageDialog(this,"Invalid local directory path entered.", "System Error", JOptionPane.ERROR_MESSAGE);
-                    //ex.printStackTrace();
                 }
+
+
             }
         });
 

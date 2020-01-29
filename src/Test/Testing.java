@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import Lib.OperatingSystem.*;
+
 
 class Testing {
 
@@ -44,7 +46,8 @@ class Testing {
         else{
             String absPath = path.getAbsolutePath();
             System.out.println("Current Directory Absolute Path: " + absPath);
-            os.watchLocalDirectoryState(absPath);
+            WatchLocalDirectoryStateThread watchLocalDirectoryStateThread = new WatchLocalDirectoryStateThread(gui, absPath);
+            watchLocalDirectoryStateThread.start();
         }
     }
 
