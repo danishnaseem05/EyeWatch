@@ -69,8 +69,8 @@ public class GUI extends JFrame {
     private JPanel gridPanel  = new JPanel(new GridLayout(11,6));
 
     // Instance variables
-    String databseFullFilePath;
-    OperatingSystem os;
+    private String databseFullFilePath;
+    private OperatingSystem os;
 
 
     public GUI(String databaseFullFilePath){
