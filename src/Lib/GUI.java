@@ -7,11 +7,10 @@ import javax.swing.text.DefaultEditorKit;
 import javax.swing.text.JTextComponent;
 import javax.swing.text.TextAction;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.io.File;
+import java.util.GregorianCalendar;
 
 public class GUI extends JFrame {
     //TODO: add otp_code functionality too
@@ -202,6 +201,78 @@ public class GUI extends JFrame {
         });
 
 
+    }
+
+
+    public static void aboutWindow(){
+        JFrame aboutFrame = new JFrame("About");
+        aboutFrame.setBackground(Color.WHITE);
+        Color aboutFrameColor = aboutFrame.getBackground();
+        Border border = BorderFactory.createLineBorder(aboutFrameColor);
+
+        // Icon image Label
+        ImageIcon desktopIconImg = new ImageIcon("./resources/icon/Eye Watch (Desktop Icon).png");
+        JLabel iconLabel = new JLabel(desktopIconImg);
+
+        // The main title Label
+        JLabel titleLabel = new JLabel("Eye Watch");
+        titleLabel.setFont(new Font("Calibri", Font.BOLD, 32));
+
+        GregorianCalendar gc = new GregorianCalendar();
+        int year = gc.getWeekYear();
+
+        // The copyrights text area
+        JTextArea copyrightsTextArea = new JTextArea("Copyright (c) " + year + " Danish Naseem. All rights reserved.");
+        copyrightsTextArea.setLineWrap(true);
+        copyrightsTextArea.setWrapStyleWord(true);
+        copyrightsTextArea.setBackground(aboutFrameColor);
+        copyrightsTextArea.setEditable(false);
+        copyrightsTextArea.setFont(new Font("Calibri", Font.PLAIN, 18));
+        copyrightsTextArea.setRows(2);
+
+        // The ok button
+        JButton okButton = new JButton("OK");
+
+        // The titlePanel for icon image label main title label
+        JPanel titlePanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        titlePanel.setBackground(Color.WHITE);
+        titlePanel.add(iconLabel);
+        titlePanel.add(titleLabel);
+
+        // The grid panel for the titlePanel and the copyrights text area
+        JPanel gridPanel = new JPanel(new GridLayout(3, 2));
+        gridPanel.setBorder(BorderFactory.createCompoundBorder(border, BorderFactory.createEmptyBorder(10, 30, 30, 30)));
+        gridPanel.add(titlePanel);
+        gridPanel.add(Box.createVerticalStrut(0));
+        gridPanel.add(copyrightsTextArea);
+        gridPanel.setBackground(Color.WHITE);
+
+        // The btnPanel for the ok Button
+        JPanel btnPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        btnPanel.add(okButton);
+        btnPanel.setBackground(Color.WHITE);
+
+        // The grid panel for the btnPanel containing the ok button
+        JPanel btnGridPanel = new JPanel(new GridLayout(1,1));
+        btnGridPanel.add(btnPanel);
+
+        // Adding the gridPanel (containing the titlePanel and the copyrights text area) and the btnGridPanel (containing the btnPanel for the ok Button)
+        aboutFrame.add(gridPanel, BorderLayout.CENTER);
+        aboutFrame.add(btnGridPanel, BorderLayout.SOUTH);
+
+        aboutFrame.setSize(350, 240);
+        aboutFrame.setResizable(false);
+        aboutFrame.setLocation(750, 420);
+
+        aboutFrame.setDefaultCloseOperation(HIDE_ON_CLOSE);
+
+        ImageIcon img = new ImageIcon("./resources/icon/Eye Watch (System Tray Icon).png");
+        aboutFrame.setIconImage(img.getImage());
+        aboutFrame.setVisible(true);
+
+        okButton.addActionListener(e -> {
+            aboutFrame.setVisible(false);
+        });
     }
 
 

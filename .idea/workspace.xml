@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="22c9b362-46de-4fc1-87c3-76d3d521060e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EyeWatch/Test/Testing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyeWatch/Test/Testing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Testing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeWatch/Lib/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyeWatch/Lib/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeWatch/Lib/OperatingSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyeWatch/Lib/OperatingSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lib/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lib/OperatingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/OperatingSystem.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +79,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.31264368" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.toDoOptions" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -501,7 +503,7 @@
       <workItem from="1579941451425" duration="34477000" />
       <workItem from="1580093662666" duration="7659000" />
       <workItem from="1580106499254" duration="5191000" />
-      <workItem from="1580157310833" duration="28230000" />
+      <workItem from="1580157310833" duration="35053000" />
     </task>
     <servers />
   </component>

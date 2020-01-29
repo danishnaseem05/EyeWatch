@@ -1,16 +1,21 @@
 package Lib;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.file.*;
+import java.sql.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.concurrent.TimeUnit;
 
 import static java.nio.file.StandardWatchEventKinds.*;
 import static javax.swing.JOptionPane.showConfirmDialog;
+import static javax.swing.WindowConstants.HIDE_ON_CLOSE;
 
 public class OperatingSystem {
 
@@ -66,7 +71,7 @@ public class OperatingSystem {
         MenuItem settingsItem = new MenuItem("Settings");
         settingsItem.addActionListener(e -> gui.setVisible(true));
         MenuItem aboutItem = new MenuItem("About");
-        aboutItem.addActionListener(e -> aboutWindow());
+        aboutItem.addActionListener(e -> gui.aboutWindow());
         MenuItem exitItem = new MenuItem("Exit");
         exitItem.addActionListener(e -> System.exit(1));
         popup.add(settingsItem);
@@ -81,12 +86,6 @@ public class OperatingSystem {
             GUI.appendLog("AWTException: TrayIcon could not be added");
             System.out.println("TrayIcon could not be added.");
         }
-    }
-
-
-    //TODO: this method opens a window displaying the program name, version number, and copyrights.
-    private void aboutWindow(){
-
     }
 
 
