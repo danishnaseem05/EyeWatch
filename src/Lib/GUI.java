@@ -10,6 +10,7 @@ import java.awt.*;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.io.File;
+import java.io.IOException;
 import java.util.GregorianCalendar;
 
 public class GUI extends JFrame {
@@ -49,7 +50,7 @@ public class GUI extends JFrame {
     private JPasswordField passwordField = new JPasswordField(12);
 
     private JButton localDirBrowseButton = new JButton("Browse");
-    private JButton doneButton           = new JButton("Save Settings");
+    private JButton saveSettingsButton = new JButton("Save Settings");
 
     private JCheckBox runOnStartupCheckBox = new JCheckBox("Run on Startup");
 
@@ -67,22 +68,16 @@ public class GUI extends JFrame {
 
     private JPanel gridPanel  = new JPanel(new GridLayout(11,6));
 
-    // Instance Variables
-    private String hostname;
-    private Integer portNumber;
-    private String username;
-    private String password;
-    private Boolean runOnStartupCheckbox;
+    // Instance variables
+    String databseFullFilePath;
+    OperatingSystem os;
 
 
-    public GUI(){
+    public GUI(String databaseFullFilePath){
+        // Set the title of this JFrame
         super("Eye Watch");
 
-        this.hostname = "";
-        this.portNumber = null;
-        this.username = "";
-        this.password = "";
-        this.runOnStartupCheckbox = false;
+        this.databseFullFilePath = databaseFullFilePath;
 
         addActionForEditJMenu(new DefaultEditorKit.CutAction(), KeyEvent.VK_X,  "Cut");
         addActionForEditJMenu(new DefaultEditorKit.CutAction(), KeyEvent.VK_C,  "Copy");
@@ -105,10 +100,10 @@ public class GUI extends JFrame {
         // Setting descriptionTextArea Components
         settingDescriptionTextAreaComponents(border);
 
-        // managing Flow Panels
+        // managing Flow Panels - adding label text fields to them
         managingFlowPanels();
 
-        // managing Grid Panel(s)
+        // managing Grid Panel(s) - adding flow panels to it(them)
         managingGridPanels();
 
         jMenuBar.add(editJMenu);
@@ -133,6 +128,10 @@ public class GUI extends JFrame {
         // Listen to the button the button and if clicked, respond back with an action (or call a method in this case)
         actionListeners();
 
+        // Operating system class
+        this.os = new OperatingSystem(this);
+        os.runInBackground();
+
     }
 
 
@@ -145,7 +144,7 @@ public class GUI extends JFrame {
         usernameTextField.setToolTipText("Enter your username");
         passwordField.setToolTipText("Enter your password");
         runOnStartupCheckBox.setToolTipText("Start the program on startup");
-        doneButton.setToolTipText("Run the program and save the settings");
+        saveSettingsButton.setToolTipText("Run the program and save the settings");
     }
 
 
@@ -206,7 +205,7 @@ public class GUI extends JFrame {
         flow11Panel.add(Box.createHorizontalStrut(296));
 
         // Done Button
-        flow11Panel.add(doneButton);
+        flow11Panel.add(saveSettingsButton);
 
         // otpCode
         flowOtpPanel.add(otpCodeLabel);
@@ -238,6 +237,23 @@ public class GUI extends JFrame {
             if(localDirPath != null) localDirTextField.setText(localDirPath.getAbsolutePath());
         });
 
+        // Save Settings Button
+        saveSettingsButton.addActionListener(e -> {
+            if(verifyEntries()){
+                CsvManager csvManager = new CsvManager();
+                String otp_code = getOtp_Code();
+                if(otp_code.length() == 0) otp_code = "*";
+                csvManager.saveSetting(getLocalDirPath(), getHostname(), getPortNumber(), getUsername(), getPassword().toString(), getRemoteDirPath(), otp_code, getRunOnStartupCheckbox().toString(), databseFullFilePath);
+                try {
+                    os.watchLocalDirectoryState(getLocalDirPath());
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                } catch (InterruptedException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+
         // About menu item
         aboutJMenuItem.addActionListener(e -> {
             aboutWindow();
@@ -245,7 +261,7 @@ public class GUI extends JFrame {
 
     }
 
-
+    // called in GUI.java and OperatingSystem.java
     protected static void aboutWindow(){
         JFrame aboutFrame = new JFrame("About");
         aboutFrame.setBackground(Color.WHITE);
@@ -317,7 +333,7 @@ public class GUI extends JFrame {
         });
     }
 
-
+    // called in various classes those need their errors, success or just processing to be logged and displayed to the user
     protected static void appendLog(String text){
         log.append(text+"\n");
     }
@@ -341,50 +357,106 @@ public class GUI extends JFrame {
     }
 
 
-    public void setHostname(String hostname){
-        this.hostname = hostname;
+    private boolean verifyEntries(){
+        String localDirPath = getLocalDirPath();
+        String hostname = getHostname();
+        String portNumber = getPortNumber();
+        String username = getUsername();
+        char[] password = getPassword();
+        String otp_code = getOtp_Code();
+        String remoteDirPath = getRemoteDirPath();
+
+        if(localDirPath.length() == 0) {
+            JOptionPane.showMessageDialog(this, "Local Directory Path is empty", "Error", JOptionPane.ERROR_MESSAGE);
+            return false;
+        }
+        else if(hostname.length() == 0) {
+            JOptionPane.showMessageDialog(this, "Hostname Or IP Text Field is empty", "Error", JOptionPane.ERROR_MESSAGE);
+            return false;
+        }
+        else if(portNumber.length() == 0) {
+            JOptionPane.showMessageDialog(this, "Port Number Text Field is empty", "Error", JOptionPane.ERROR_MESSAGE);
+            return false;
+        }
+        else if(username.length() == 0) {
+            JOptionPane.showMessageDialog(this, "Username Text Field is empty", "Error", JOptionPane.ERROR_MESSAGE);
+            return false;
+        }
+        else if(password.length == 0) {
+            JOptionPane.showMessageDialog(this, "Password Field is empty", "Error", JOptionPane.ERROR_MESSAGE);
+            return false;
+        }
+        else if(remoteDirPath.length() == 0) {
+            JOptionPane.showMessageDialog(this, "Remote Directory Path is empty", "Error", JOptionPane.ERROR_MESSAGE);
+            return false;
+        }
+        else if(portNumber.length() > 0) {
+            Boolean val = verifyInteger(portNumber);
+            if(val == false) {
+                JOptionPane.showMessageDialog(this, "Entered Port Number is not a number. Please try again.", "Value Error", JOptionPane.ERROR_MESSAGE);
+                return false;
+            }
+        }
+        else if(otp_code.length() > 0) {
+            Boolean val = verifyInteger(otp_code);
+            if(val == false){
+                JOptionPane.showMessageDialog(this, "Entered 2 Step Verification Code is not a number. Please try again.", "Value Error", JOptionPane.ERROR_MESSAGE);
+                return false;
+            }
+        }
+
+        return true;
     }
+
+
+    private boolean verifyInteger(String intToVerify){
+        try{
+            Integer.parseInt(intToVerify);
+            return true;
+        } catch (NumberFormatException e){
+            return false;
+        }
+    }
+
+
+    public String getLocalDirPath(){
+        return localDirTextField.getText();
+    }
+
 
     public String getHostname(){
-        return this.hostname;
+        return hostOrIPTextField.getText();
     }
 
 
-    public void setPortNumber(Integer portNumber){
-        this.portNumber = portNumber;
+    public String getPortNumber(){
+        return HTTPSPortNumTextField.getText();
     }
 
-    public Integer getPortNumber(){
-        return this.portNumber;
-    }
-
-
-    public void setUsername(String username){
-        this.username = username;
-    }
 
     public String getUsername(){
-        return this.username;
+        return usernameTextField.getText();
     }
 
 
-    public void setPassword(String password){
-        this.password = password;
-    }
-
-    public String getPassword(){
-        return this.password;
+    public char[] getPassword(){
+        return passwordField.getPassword();
     }
 
 
-    public void setRunOnStartupCheckbox(Boolean runOnStartupCheckbox){
-        this.runOnStartupCheckbox = runOnStartupCheckbox;
+    public String getOtp_Code(){
+        return otpCodeTextField.getText();
     }
+
+
+    public String getRemoteDirPath(){
+        return remoteDirTextField.getText();
+    }
+
 
     public Boolean getRunOnStartupCheckbox(){
-        return this.runOnStartupCheckbox;
+        return runOnStartupCheckBox.isSelected();
     }
-
 
 
 }

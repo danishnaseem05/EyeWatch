@@ -1,21 +1,18 @@
 package Lib;
 
+import javafx.event.Event;
+
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.file.*;
-import java.sql.Date;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.concurrent.TimeUnit;
 
 import static java.nio.file.StandardWatchEventKinds.*;
 import static javax.swing.JOptionPane.showConfirmDialog;
-import static javax.swing.WindowConstants.HIDE_ON_CLOSE;
 
 public class OperatingSystem {
 
@@ -98,11 +95,17 @@ public class OperatingSystem {
         while(true) {
             watchKey = watcher.poll(10, TimeUnit.MINUTES);
             if(watchKey != null){
-                //TODO: Instead of printing the event.context(), make the event call the program(which adds the filenames
-                // to the LinkedList, and access the remote directory to look for those files). If the files exist,
-                // delete those files from the local directory, otherwise just return and wait for another event call
-                // from here.
-                watchKey.pollEvents().stream().forEach(event -> System.out.println(event.context()));
+                watchKey.pollEvents().stream().forEach(event -> {
+                    String e = event.context().toString();
+                    GUI.appendLog(e);
+                    System.out.println(e);
+
+                    //TODO: make the event call the program(which adds the filename
+                    // to the LinkedList, and access the remote directory to look for those files).
+                    // If the files exist, delete those files from the local directory, otherwise just
+                    // return and wait for another event call from here.
+
+                });
             }
             watchKey.reset();
         }

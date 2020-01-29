@@ -6,7 +6,7 @@ public class GUIHandler {
     Lib lib;
 
     public GUIHandler(){
-        this.gui = new GUI();
+        //this.gui = new GUI();
     }
 
     public void openFileExplorer(){

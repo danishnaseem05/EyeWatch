@@ -34,11 +34,13 @@ public class CsvManager {
 
             GUI.appendLog("Success: Settings Saved.");
             System.out.println("Success: Settings Saved.");
+            return;
             //JOptionPane.showMessageDialog(null, "Settings saved.");
 
         } catch(Exception e){
             GUI.appendLog("Error: Settings cannot be saved. Check the filepath and Try Again.");
             System.out.println("Error: Settings cannot be saved. Check the filepath and Try Again.");
+            return;
             //JOptionPane.showMessageDialog(null, "Error: Settings cannot be saved.");
         }
     }

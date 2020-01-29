@@ -27,13 +27,13 @@ public class Lib {
 
 
     public Lib(String hostname, Integer portNumber){
-        this.gui = new GUI();
+        this.gui = new GUI(pathToDatabase);
         os = new OperatingSystem(gui);
         cloudDrive = new SynologyAPI(hostname, portNumber);
     }
 
     public Lib() throws IOException, InterruptedException {
-        this.gui = new GUI();
+        this.gui = new GUI("");
 
         if(isDatabase()){
             // If database is present

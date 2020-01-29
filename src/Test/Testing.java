@@ -16,12 +16,14 @@ class Testing {
     public static void main(String[] args) throws IOException, JSONException, InterruptedException {
         Testing testing = new Testing();
 
-        //testing.csvManagerTest();
+
         //testing.http_ClientTest();
         //testing.synologyAPITest();
-        GUI gui = testing.GUITest();
+        //testing.csvManagerTest();
+        testing.libStaticMethodsTest();
+        GUI gui = testing.GUITest("./.EyeWatch/UserSetting.csv");
         //testing.operatingSystemTest(gui);
-        //testing.libStaticMethodsTest();
+
     }
 
 
@@ -57,21 +59,21 @@ class Testing {
     void csvManagerTest(){
         System.out.println("CREATE CSV FILE:");
         CsvManager csvManager = new CsvManager();
-        csvManager.createCsv("./TEST/.EyeWatch", "test");
+        csvManager.createCsv("./.EyeWatch", "test");
 
         System.out.println("\nWRITE TO test.csv:");
-        csvManager.saveSetting("./TEST/.EyeWatch", "danishnaseem05.synology.me", "5001", "danishnaseem05", "DanNass6", "home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite", "794913", "false", "./TEST/.EyeWatch/test.csv");
+        csvManager.saveSetting("./TEST/.EyeWatch", "danishnaseem05.synology.me", "5001", "danishnaseem05", "DanNass6", "home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite", "794913", "false", ".EyeWatch/test.csv");
 
         System.out.println("\nREAD test.csv");
-        HashMap<String, String> database2 = csvManager.readCsv("./TEST/.EyeWatch/test.csv");
+        HashMap<String, String> database2 = csvManager.readCsv("./.EyeWatch/test.csv");
         for(Map.Entry<String, String> entry2: database2.entrySet()){
             System.out.println(entry2);
         }
     }
 
 
-    GUI GUITest(){
-        GUI gui = new GUI();
+    GUI GUITest(String databaseFullFilePath){
+        GUI gui = new GUI(databaseFullFilePath);
         return gui;
     }
 
@@ -81,7 +83,7 @@ class Testing {
         System.out.println("Is Database? " + databaseBool);
 
         Lib.createNewDatabase();
-        Lib.writeToDatabase("./TEST/.EyeWatch", "danishnaseem05.synology.me", "5001", "danishnaseem05", "DanNass6", "home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite", "794913", "false");
+        //Lib.writeToDatabase("./TEST/.EyeWatch", "danishnaseem05.synology.me", "5001", "danishnaseem05", "DanNass6", "home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite", "794913", "false");
 
         System.out.println();
         HashMap<String, String> database = Lib.readDatabase();
