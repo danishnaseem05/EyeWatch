@@ -72,16 +72,14 @@ public class GUI extends JFrame {
 
     private JPanel gridPanel  = new JPanel(new GridLayout(11,6));
 
-    // Instance variables
-    private String databseFullFilePath;
-    private OperatingSystem os;
+    private Lib lib;
 
 
-    public GUI(String databaseFullFilePath){
+    public GUI(Lib lib){
         // Set the title of this JFrame
         super("Eye Watch");
 
-        this.databseFullFilePath = databaseFullFilePath;
+        this.lib = lib;
 
         addActionForEditJMenu(new DefaultEditorKit.CutAction(), KeyEvent.VK_X,  "Cut");
         addActionForEditJMenu(new DefaultEditorKit.CutAction(), KeyEvent.VK_C,  "Copy");
@@ -133,7 +131,8 @@ public class GUI extends JFrame {
         actionListeners();
 
         // Operating system class
-        this.os = new OperatingSystem(this);
+        // Instance variables
+        OperatingSystem os = new OperatingSystem(this);
         os.runInBackground();
 
     }
@@ -234,7 +233,6 @@ public class GUI extends JFrame {
         // Save Settings Button
         saveSettingsButton.addActionListener(e -> {
             if(verifyEntries()){
-                CsvManager csvManager = new CsvManager();
                 String otp_code = getOtp_Code();
                 if(otp_code.length() == 0 || otp_code.equals("*")) otp_code = "*";
 
@@ -242,7 +240,7 @@ public class GUI extends JFrame {
                 WatchLocalDirectoryStateThread watchLocalDirThread = new WatchLocalDirectoryStateThread(this, getLocalDirPath());
                 watchLocalDirThread.start();
 
-                csvManager.saveSetting(getLocalDirPath(), getHostname(), getPortNumber(), getUsername(), getPassword().toString(), getRemoteDirPath(), otp_code, getRunOnStartupCheckbox().toString(), databseFullFilePath);
+                lib.writeToDatabase(getLocalDirPath(), getHostname(), getPortNumber(), getUsername(), getPassword().toString(), getRemoteDirPath(), otp_code, getRunOnStartupCheckbox().toString());
             }
         });
 

@@ -5,11 +5,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 
-import Lib.OperatingSystem.*;
 
 public class Lib {
 
-    OperatingSystem os;
     SynologyAPI cloudDrive;
 
     private HashMap<String, String> database;
@@ -29,39 +27,18 @@ public class Lib {
 
 
     public Lib(){
-        this.gui = new GUI(pathToDatabase);
-        os = new OperatingSystem(gui);
+        this.gui = new GUI(this);
+
+        createNewDatabase();
+        readDatabase();
+        updateGUIFromDatabase();
+
+        // Now we have the hostname and the port number by running the updateGUIFromDatabase, which calls
+        // collectDatabaseVars method, which collects the initialized the variables collected from the database, which
+        // were collected from the GUI
+        cloudDrive = new SynologyAPI(hostnameOrIP, portNumber);
     }
 
-//    public Lib() throws IOException, InterruptedException {
-//        this.gui = new GUI("");
-//
-//        if(isDatabase()){
-//            // If database is present
-//            // Open the database for reading and writing
-//            //openDatabase();
-//            this.database = readDatabase();
-//            // Don't show the GUI (unless the user clicks on settings from the system tray),
-//            // and starts running in the background (inside the system tray)
-//            this.os = new OperatingSystem(gui);
-//            os.runInBackground();
-//            // Save each of this.database key's value inside an instance variable, whose name is same as the key's
-//            collectDatabaseVars();
-//            // Then close the database
-//            //closeDatabase();
-//            // Then calls the respected methods, passing those variables as arguments
-//            // First method will be to start tracking the local dir
-//            WatchLocalDirectoryStateThread watchLocalDirectoryStateThread = new WatchLocalDirectoryStateThread(gui, localDirPath);
-//            watchLocalDirectoryStateThread.start();
-//            // When the user clicks on settings on the program running in the system tray, the program initializes a GUI, already filled with
-//            // the information that was collected inside the variables
-//
-//        } else{
-//            createNewDatabase();
-//            //openDatabase();
-//            //writeToNewDatabase();
-//        }
-//    }
 
     public boolean isDatabase(){
         if(new File("./.EyeWatch").exists()){
@@ -133,28 +110,7 @@ public class Lib {
         remoteDirPath = database.get("remoteDirPath");
         otp_code = database.get("otp_code");
         isRunOnStartup = Boolean.parseBoolean(database.get("isRunOnStartup"));
-
-        cloudDrive = new SynologyAPI(hostnameOrIP, portNumber);
     }
-
-
-    // this class initializes the GUI, and runs the main program functions.
-
-    // User local directory selection
-
-    // User remote directory path
-
-    // Open Synology FileStation to pick a remote directory
-
-    // Synology API class used to get
-
-    // Load the program on startup
-
-    // Keep track of any changes made inside the directory
-
-    // Add to LinkedList
-
-    // Program runs asynchronous in the background
 
 
 }

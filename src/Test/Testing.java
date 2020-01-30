@@ -22,8 +22,8 @@ class Testing {
         //testing.http_ClientTest();
         //testing.synologyAPITest();
         //testing.csvManagerTest();
-        testing.libTest();
-        //GUI gui = testing.guiTest("./.EyeWatch/UserSetting.csv");
+        //Lib lib = testing.libTest();
+        //GUI gui = testing.guiTest(lib);
         //testing.operatingSystemTest(gui);
 
     }
@@ -75,13 +75,13 @@ class Testing {
     }
 
 
-    GUI guiTest(String databaseFullFilePath){
-        GUI gui = new GUI(databaseFullFilePath);
+    GUI guiTest(Lib lib){
+        GUI gui = new GUI(lib);
         return gui;
     }
 
 
-    void libTest(){
+    Lib libTest(){
         Lib lib = new Lib();
         boolean databaseBool = lib.isDatabase();
         System.out.println("Is Database? " + databaseBool);
@@ -96,6 +96,8 @@ class Testing {
             System.out.println(entry);
         }
         lib.updateGUIFromDatabase();
+
+        return lib;
     }
 
 }

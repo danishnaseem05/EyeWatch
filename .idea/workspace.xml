@@ -5,13 +5,13 @@
       <change beforePath="$PROJECT_DIR$/.EyeWatch/UserSetting.csv" beforeDir="false" afterPath="$PROJECT_DIR$/.EyeWatch/UserSetting.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Documentation.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeWatch/App/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyeWatch/App/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/EyeWatch/Lib/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyeWatch/Lib/GUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/EyeWatch/Lib/Lib.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyeWatch/Lib/Lib.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EyeWatch/Lib/SynologyAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyeWatch/Lib/SynologyAPI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/EyeWatch/Test/Testing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyeWatch/Test/Testing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lib/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lib/Lib.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/Lib.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lib/SynologyAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lib/SynologyAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Testing.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -411,13 +411,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Testing">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lib.GUI" />
       <module name="EyeWatch" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Lib.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App.Main" />
+      <module name="EyeWatch" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="App.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -464,16 +477,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="get#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/src/Lib/get.http">
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Testing" />
         <item itemvalue="Application.GUI" />
         <item itemvalue="Application.OperatingSystem" />
         <item itemvalue="Application.SynologyAPI" />
-        <item itemvalue="HTTP Request.get#1" />
       </list>
     </recent_temporary>
   </component>
@@ -509,7 +519,7 @@
       <workItem from="1579941451425" duration="34477000" />
       <workItem from="1580093662666" duration="7659000" />
       <workItem from="1580106499254" duration="5191000" />
-      <workItem from="1580157310833" duration="66879000" />
+      <workItem from="1580157310833" duration="68604000" />
     </task>
     <servers />
   </component>
