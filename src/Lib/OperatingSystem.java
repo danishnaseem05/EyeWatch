@@ -85,7 +85,7 @@ public class OperatingSystem {
     }
 
 
-    public static class WatchLocalDirectoryStateThread extends Thread{
+    public static class WatchLocalDirectoryStateThread extends Thread {
         GUI gui;
         String localDirPath;
 
