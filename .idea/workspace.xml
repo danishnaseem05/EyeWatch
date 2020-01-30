@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="22c9b362-46de-4fc1-87c3-76d3d521060e" name="Default Changelist" comment="" />
+    <list default="true" id="22c9b362-46de-4fc1-87c3-76d3d521060e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation.docx" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +69,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/EyeWatch.jar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -76,7 +79,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.31264368" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -409,7 +412,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JAR Application.EyeWatch">
     <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lib.GUI" />
       <module name="EyeWatch" />
@@ -475,6 +478,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EyeWatch" type="JarApplication">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/EyeWatch.jar" />
+      <option name="WORKING_DIRECTORY" value="D:\danis\Documents\PERSONAL PROJECTS\EyeWatch" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.GUI" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.OperatingSystem" />
+      <item itemvalue="Application.SynologyAPI" />
+      <item itemvalue="Application.Testing" />
+      <item itemvalue="JAR Application.EyeWatch" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -517,7 +534,7 @@
       <workItem from="1579941451425" duration="34477000" />
       <workItem from="1580093662666" duration="7659000" />
       <workItem from="1580106499254" duration="5191000" />
-      <workItem from="1580157310833" duration="72784000" />
+      <workItem from="1580157310833" duration="73775000" />
     </task>
     <servers />
   </component>
