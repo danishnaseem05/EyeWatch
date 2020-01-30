@@ -1,0 +1,8 @@
+localDirPath,*
+hostnameOrIP,*
+portNumber,*
+username,*
+password,*
+remoteDirPath,*
+otp_code,*
+isRunOnStartup,*
