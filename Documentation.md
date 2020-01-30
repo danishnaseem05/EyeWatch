@@ -140,11 +140,11 @@ Step-4: Logout
 
 TO HIDE THE DIRECTORY:
 
-**Command:** `attrib +s +h &quot;[PATH/TO/THE/DIRECTORY]&quot;`
+**Command:** `attrib +s +h "[PATH/TO/THE/DIRECTORY]"`
 
 TO UNHIDE A DIRECTORY:
 
-**Command:** `attrib +s -h &quot;[PATH/TO/THE/DIRECTORY]&quot;`
+**Command:** `attrib +s -h "[PATH/TO/THE/DIRECTORY]"`
 
 **-- CLASSES: [GUI, GUIHandler, SynologyAPI, Main, Testing] --**
 
@@ -271,7 +271,7 @@ Eleventh Row
 
 1. OperatingSystem[`runOnStartup`, `runInBackground`, `watchLocalDirectoryState`]
 
-If the user checks the `Run on Startup` checkbox, then we add the program to the Windows 10 Startup folder, whose path is as follows: `&quot;C:\Users\[USER]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup&quot;`
+If the user checks the `Run on Startup` checkbox, then we add the program to the Windows 10 Startup folder, whose path is as follows: `C:\Users\[USER]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`
 
 To get the current [USER], make a call to CMD with this command: `echo %username%`
 
