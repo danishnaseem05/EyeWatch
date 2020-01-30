@@ -22,8 +22,8 @@ class Testing {
         //testing.http_ClientTest();
         //testing.synologyAPITest();
         //testing.csvManagerTest();
-        testing.libStaticMethodsTest();
-        GUI gui = testing.GUITest("./.EyeWatch/UserSetting.csv");
+        testing.libTest();
+        GUI gui = testing.guiTest("./.EyeWatch/UserSetting.csv");
         //testing.operatingSystemTest(gui);
 
     }
@@ -75,25 +75,27 @@ class Testing {
     }
 
 
-    GUI GUITest(String databaseFullFilePath){
+    GUI guiTest(String databaseFullFilePath){
         GUI gui = new GUI(databaseFullFilePath);
         return gui;
     }
 
 
-    void libStaticMethodsTest(){
-        boolean databaseBool = Lib.isDatabase();
+    void libTest(){
+        Lib lib = new Lib("danishnaseem05.sysnology.me", 5001);
+        boolean databaseBool = lib.isDatabase();
         System.out.println("Is Database? " + databaseBool);
 
-        Lib.createNewDatabase();
+        lib.createNewDatabase();
         //Lib.writeToDatabase("./TEST/.EyeWatch", "danishnaseem05.synology.me", "5001", "danishnaseem05", "DanNass6", "home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite", "794913", "false");
 
         System.out.println();
-        HashMap<String, String> database = Lib.readDatabase();
+        HashMap<String, String> database = lib.readDatabase();
         System.out.println();
         for(Map.Entry<String, String> entry: database.entrySet()){
             System.out.println(entry);
         }
+        lib.updateGUIFromDatabase();
     }
 
 }

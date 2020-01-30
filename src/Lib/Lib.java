@@ -12,16 +12,16 @@ public class Lib {
     OperatingSystem os;
     SynologyAPI cloudDrive;
 
-    HashMap<String, String> database;
-    static String pathToDatabase = "./.EyeWatch/UserSetting.csv";
+    private HashMap<String, String> database;
+    private String pathToDatabase = "./.EyeWatch/UserSetting.csv";
 
     // Instance variables
     private String localDirPath;
     private String hostnameOrIP;
-    private Integer portNumber;
+    private String portNumber;
     private String username;
     private String password;
-    private String remoteDirPath;
+    private  String remoteDirPath;
     private boolean isRunOnStartup;
     private String otp_code;
 
@@ -64,7 +64,7 @@ public class Lib {
         }
     }
 
-    public static boolean isDatabase(){
+    public boolean isDatabase(){
         if(new File("./.EyeWatch").exists()){
             if(new File("./.EyeWatch/UserSetting.csv").exists())
                 return true;
@@ -73,7 +73,7 @@ public class Lib {
     }
 
 
-    public static void createNewDatabase(){
+    public void createNewDatabase(){
         CsvManager csvManager = new CsvManager();
         if(! isDatabase()){
             File dir = new File(".EyeWatch");
@@ -98,12 +98,26 @@ public class Lib {
     }
 
 
-    public static HashMap<String, String> readDatabase(){
+    public HashMap<String, String> readDatabase(){
         CsvManager csvManager = new CsvManager();
         return csvManager.readCsv(pathToDatabase);
     }
 
-    public static void writeToDatabase(String localDirPath, String hostnameOrIP, String portNumber, String username, String password,
+
+    public void updateGUIFromDatabase(){
+        collectDatabaseVars();
+        gui.setLocalDirPath(localDirPath);
+        gui.setHostname(hostnameOrIP);
+        gui.setPortNumber(portNumber);
+        gui.setUsername(username);
+        gui.setPassword(password);
+        gui.setRemoteDirPath(remoteDirPath);
+        gui.setOtp_Code(otp_code);
+        gui.setRunOnStartupCheckBox(isRunOnStartup);
+    }
+
+
+    public void writeToDatabase(String localDirPath, String hostnameOrIP, String portNumber, String username, String password,
                                  String remoteDirPath, String otp_code, String isRunOnStartup){
         CsvManager csvManager = new CsvManager();
         csvManager.saveSetting(localDirPath, hostnameOrIP, portNumber, username, password, remoteDirPath, otp_code, isRunOnStartup, pathToDatabase);
@@ -111,14 +125,14 @@ public class Lib {
 
 
     private void collectDatabaseVars(){
-        this.localDirPath = database.get("localDirPath");
-        this.hostnameOrIP = database.get("hostnameOrIP");
-        this.portNumber = Integer.parseInt(database.get("portNumber"));
-        this.username = database.get("username");
-        this.password = database.get("password");
-        this.remoteDirPath = database.get("remoteDirPath");
-        this.otp_code = database.get("otp_code");
-        this.isRunOnStartup = Boolean.parseBoolean(database.get("isRunOnStartup"));
+        localDirPath = database.get("localDirPath");
+        hostnameOrIP = database.get("hostnameOrIP");
+        portNumber = database.get("portNumber");
+        username = database.get("username");
+        password = database.get("password");
+        remoteDirPath = database.get("remoteDirPath");
+        otp_code = database.get("otp_code");
+        isRunOnStartup = Boolean.parseBoolean(database.get("isRunOnStartup"));
     }
 
 
