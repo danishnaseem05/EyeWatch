@@ -236,7 +236,7 @@ public class GUI extends JFrame {
             if(verifyEntries()){
                 CsvManager csvManager = new CsvManager();
                 String otp_code = getOtp_Code();
-                if(otp_code.length() == 0) otp_code = "*";
+                if(otp_code.length() == 0 || otp_code.equals("*")) otp_code = "*";
 
                 // monitoring local directory in a new thread
                 WatchLocalDirectoryStateThread watchLocalDirThread = new WatchLocalDirectoryStateThread(this, getLocalDirPath());
@@ -413,40 +413,72 @@ public class GUI extends JFrame {
     }
 
 
+    public void setLocalDirPath(String localDirPath){
+        localDirTextField.setText(localDirPath);
+    }
+
     public String getLocalDirPath(){
         return localDirTextField.getText();
     }
 
+
+    public void setHostname(String hostname){
+        hostOrIPTextField.setText(hostname);
+    }
 
     public String getHostname(){
         return hostOrIPTextField.getText();
     }
 
 
+    public void setPortNumber(String portNumber){
+        HTTPSPortNumTextField.setText(portNumber);
+    }
+
     public String getPortNumber(){
         return HTTPSPortNumTextField.getText();
     }
 
+
+    public void setUsername(String username){
+        usernameTextField.setText(username);
+    }
 
     public String getUsername(){
         return usernameTextField.getText();
     }
 
 
+    public void setPassword(String password){
+        passwordField.setText(password);
+    }
+
     public char[] getPassword(){
         return passwordField.getPassword();
     }
 
+
+    public void setOtp_Code(String otp_code){
+        otpCodeTextField.setText(otp_code);
+    }
 
     public String getOtp_Code(){
         return otpCodeTextField.getText();
     }
 
 
+    public void setRemoteDirPath(String remoteDirPath){
+        remoteDirTextField.setText(remoteDirPath);
+    }
+
     public String getRemoteDirPath(){
         return remoteDirTextField.getText();
     }
 
+
+    public void setRunOnStartupCheckBox(Boolean runOnStartupChkBox){
+        runOnStartupCheckBox.setSelected(runOnStartupChkBox);
+    }
 
     public Boolean getRunOnStartupCheckbox(){
         return runOnStartupCheckBox.isSelected();
