@@ -100,7 +100,8 @@ public class Lib {
 
     public HashMap<String, String> readDatabase(){
         CsvManager csvManager = new CsvManager();
-        return csvManager.readCsv(pathToDatabase);
+        this.database = csvManager.readCsv(pathToDatabase);
+        return this.database;
     }
 
 
