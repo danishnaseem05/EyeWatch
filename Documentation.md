@@ -82,11 +82,11 @@ Step-1: Retrieve API information
 
 Retrieve API information from the target Synology DiskStation by making a request to `[HOSTNAME]:[PORT_NUMBER]/webapi/query.cgi` with `SYNO.API.Info` `API` parameters. The information provided in the response contains available API name, API method, API path and API version. Once you have all the information at hand, your application can make further requests to all available APIs, which here will be the FileStation API. Our request GET to get all the available APIs:
 
-`https://[HOST_NAME]:[HTTPS_PORT_NUMBER]/webapi/query.cgi?api=SYNO.API.Info&amp;version=1&amp;method=query&amp;query=all`
+`https://[HOST_NAME]:[HTTPS_PORT_NUMBER]/webapi/query.cgi?api=SYNO.API.Info&version=1&method=query&query=all`
 
 And to be more precise, our GET request to get Auth and FileStation.List API info is:
 
-`https://[HOST_NAME]:[HTTPS_PORT_NUMBER]/webapi/query.cgi?api=SYNO.API.Info&amp;version=1&amp;method=query&amp;query=SYNO.API.Auth,SYNO.FileStation.List`
+`https://[HOST_NAME]:[HTTPS_PORT_NUMBER]/webapi/query.cgi?api=SYNO.API.Info&version=1&method=query&query=SYNO.API.Auth,SYNO.FileStation.List`
 
 If we successfully receive a .JSON file in response, we will extract SYNO.API.Auth and SYNO.FileStation.List dictionaries from the Data dictionary.
 
@@ -96,7 +96,7 @@ Step-2: Login
 
 Now we know FileStation is available, if not display an error. Now we begin the login process by simply making a request to the SYNO.API.Auth API using the provided username and password. The POST request is the following:
 
-`https://[HOST_NAME]:[HTTPS_PORT_NUMBER]/webapi/auth.cgi?api=SYNO.API.Auth&amp;version=3&amp;method=login&amp;account=[USERNAME]&amp;passwd=[PASSWORD]&amp;session=FileStation&amp;format=cookie&amp;otp_code=[TWO-WAY-AUTHENTICATION-CODE]`
+`https://[HOST_NAME]:[HTTPS_PORT_NUMBER]/webapi/auth.cgi?api=SYNO.API.Auth&version=3&method=login&account=[USERNAME]&passwd=[PASSWORD]&session=FileStation&format=cookie&otp_code=[TWO-WAY-AUTHENTICATION-CODE]`
 
 TWO-WAY-AUTHENTICATION-CODE is a one-time pin code generally obtained from a mobile phone.
 
@@ -108,7 +108,7 @@ Step-3: Request a File Station API
 
 - After Everything has gone right and the user has successfully logged in to the Synology DiskStation&#39;s FileStation. The program saves the local directory path and remote directory path inside our custom .JSON file for the program to use. The GET request is as follows:
 
-`https://[HOST_NAME]:[HTTPS_PORT_NUMBER]/webapi/entry.cgi?api=SYNO.FileStation.List&amp;version=1&amp;method=list&amp;additional=real_path%2Csize%2Cperm%2Ctype&amp;folder_path=%2F[FOLDER_PATH]`
+`https://[HOST_NAME]:[HTTPS_PORT_NUMBER]/webapi/entry.cgi?api=SYNO.FileStation.List&version=1&method=list&additional=real_path%2Csize%2Cperm%2Ctype&folder_path=%2F[FOLDER_PATH]`
 
 For me the FOLDER\_PATH is = `home/Drive/Videos/Other/NVIDIA/GeForce%20NOW/Fortnite`
 
@@ -116,7 +116,7 @@ Step-4: Logout
 
 - The program logs out of the Synology drive and starts running in the background keeping track of any changes inside the local directory. If any changes, then the program logs back into the Synology DiskStation&#39;s FileStation and runs the process. Once the process finishes, it logs back out. The GET request for logout is as follows:
 
-`https://[HOST_NAME]:[HTTPS_PORT_NUMBER]/webapi/auth.cgi?api=SYNO.API.Auth&amp;version=1&amp;method=logout&amp;session=FileStation`
+`https://[HOST_NAME]:[HTTPS_PORT_NUMBER]/webapi/auth.cgi?api=SYNO.API.Auth&version=1&method=logout&session=FileStation`
 
 - If the local directory is empty, it does nothing. If any files are added to it, the program runs. **\*\* refer to `WHAT THE PROGRAM DOES` section above to see how it runs \*\***
 
