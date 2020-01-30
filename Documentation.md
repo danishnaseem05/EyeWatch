@@ -64,16 +64,6 @@ Scans the selected directory, and if it contains any files, add those files&#39;
 
 - Write the constructor for Lib.java to connect to everything and finally make the entire program run.
 
-**-- LEGEND --**
-
-        = Synology API GET requests.
-
-        = GUI window options.
-
-        = Methods of different Java Classes.
-
-        = CMD commands.
-
 **-- HOW THE PROGRAM RUNS --**
 
 - User clicks on program icon and the program starts launching. It will look for the user settings from an already created Database, or .csv file (not sure what to use yet). If none is present, then a new one will be created and written with the variable names as keys and empty strings as values. Then the GUI will load up (**\*\*refer to GUI section under CLASSES for more details\*\*)** , and by default will already have the information entered from the Database or .csv file (which right now is just empty strings, so GUI TextFields would be empty).
