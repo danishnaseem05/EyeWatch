@@ -414,7 +414,8 @@ public class GUI extends JFrame {
 
 
     public void setLocalDirPath(String localDirPath){
-        localDirTextField.setText(localDirPath);
+        if(localDirPath.equals("*")) localDirTextField.setText("");
+        else localDirTextField.setText(localDirPath);
     }
 
     public String getLocalDirPath(){
@@ -423,7 +424,8 @@ public class GUI extends JFrame {
 
 
     public void setHostname(String hostname){
-        hostOrIPTextField.setText(hostname);
+        if(hostname.equals("*")) hostOrIPTextField.setText("");
+        else hostOrIPTextField.setText(hostname);
     }
 
     public String getHostname(){
@@ -432,7 +434,8 @@ public class GUI extends JFrame {
 
 
     public void setPortNumber(String portNumber){
-        HTTPSPortNumTextField.setText(portNumber);
+        if(portNumber.equals("*")) HTTPSPortNumTextField.setText("");
+        else HTTPSPortNumTextField.setText(portNumber);
     }
 
     public String getPortNumber(){
@@ -441,7 +444,8 @@ public class GUI extends JFrame {
 
 
     public void setUsername(String username){
-        usernameTextField.setText(username);
+        if(username.equals("*")) usernameTextField.setText("");
+        else usernameTextField.setText(username);
     }
 
     public String getUsername(){
@@ -450,7 +454,8 @@ public class GUI extends JFrame {
 
 
     public void setPassword(String password){
-        passwordField.setText(password);
+        if(password.equals("*")) passwordField.setText("");
+        else passwordField.setText(password);
     }
 
     public char[] getPassword(){
@@ -459,7 +464,8 @@ public class GUI extends JFrame {
 
 
     public void setOtp_Code(String otp_code){
-        otpCodeTextField.setText(otp_code);
+        if(otp_code.equals("*")) otpCodeTextField.setText("");
+        else otpCodeTextField.setText(otp_code);
     }
 
     public String getOtp_Code(){
@@ -468,7 +474,8 @@ public class GUI extends JFrame {
 
 
     public void setRemoteDirPath(String remoteDirPath){
-        remoteDirTextField.setText(remoteDirPath);
+        if(remoteDirPath.equals("*")) remoteDirTextField.setText("");
+        else remoteDirTextField.setText(remoteDirPath);
     }
 
     public String getRemoteDirPath(){

@@ -23,7 +23,7 @@ class Testing {
         //testing.synologyAPITest();
         //testing.csvManagerTest();
         testing.libTest();
-        GUI gui = testing.guiTest("./.EyeWatch/UserSetting.csv");
+        //GUI gui = testing.guiTest("./.EyeWatch/UserSetting.csv");
         //testing.operatingSystemTest(gui);
 
     }
@@ -53,7 +53,7 @@ class Testing {
 
 
     void synologyAPITest() throws IOException, JSONException {
-        SynologyAPI cloud = new SynologyAPI("danishnaseem05.synology.me", 5001);
+        SynologyAPI cloud = new SynologyAPI("danishnaseem05.synology.me", "5001");
         //System.out.println(cloud.run("danishnaseem05", "DanNass6", "home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite"));
         System.out.println(cloud.run("danishnaseem05", "DanNass6", "home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite", "984176"));
     }
@@ -82,7 +82,7 @@ class Testing {
 
 
     void libTest(){
-        Lib lib = new Lib("danishnaseem05.sysnology.me", 5001);
+        Lib lib = new Lib();
         boolean databaseBool = lib.isDatabase();
         System.out.println("Is Database? " + databaseBool);
 

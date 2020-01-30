@@ -29,11 +29,11 @@ public class SynologyAPI {
      */
 
     private final String hostname;
-    private final Integer portNumber;
+    private final String portNumber;
     private String sid;
 
 
-    public SynologyAPI(String hostname, Integer portNumber){
+    public SynologyAPI(String hostname, String portNumber){
         this.hostname = hostname;
         this.portNumber = portNumber;
         this.sid = "";

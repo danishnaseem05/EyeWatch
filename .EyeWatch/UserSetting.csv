@@ -1,8 +1,8 @@
-localDirPath,D:\danis\Documents\PERSONAL PROJECTS\EyeWatch\TEST\.EyeWatch
-hostnameOrIP,ghfhgfh
-portNumber,5001
-username,dfsdfs
-password,[C@76c97b69
-remoteDirPath,jghsdjdsh
+localDirPath,*
+hostnameOrIP,*
+portNumber,*
+username,*
+password,*
+remoteDirPath,*
 otp_code,*
-isRunOnStartup,true
+isRunOnStartup,*
