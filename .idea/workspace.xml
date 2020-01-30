@@ -59,7 +59,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.19.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -507,7 +507,7 @@
       <workItem from="1579941451425" duration="34477000" />
       <workItem from="1580093662666" duration="7659000" />
       <workItem from="1580106499254" duration="5191000" />
-      <workItem from="1580157310833" duration="71550000" />
+      <workItem from="1580157310833" duration="71857000" />
     </task>
     <servers />
   </component>
