@@ -58,7 +58,7 @@ Scans the selected directory, and if it contains any files, add those files&#39;
 
 - Fix the port number error in the SynologyAPI.java
 
-- Figure out the bug that is causing the GUI to not display the http port number error if the typed otp code is not an integer.
+- Figure out the bug that is causing the GUI to not display the https port number error if the typed https port number is not an integer.
 
 - Make the WatchLocalDirectoryStateThread class in OperatingSystem.java more efficient so it doesn&#39;t take up the CPU when running in Idle. Create idle method to achieve this.
 
