@@ -46,7 +46,7 @@ Scans the selected directory, and if it contains any files, add those files&#39;
 
 **-- TODO --**
 
-- Call the SynologyAPI&#39;s  run method from the Lib.java constructor and the Filenames in a LinkedList.
+- Call the SynologyAPI&#39;s  run method from the Lib.java constructor and save the Filenames in a LinkedList.
 
 - Make a method in Lib.java that deletes the file from [localDirPath + File.separator + filename], where filename is the argument.
 
