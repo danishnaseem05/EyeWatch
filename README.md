@@ -16,7 +16,7 @@ The intention of this software for me is solely to delete the Fortnite video fil
 
 ### TODO
 
-- Change the name of the entire program from EyeWatch to EyePurgeWatch
+- Change the name of the entire program from EyeWatch to either EyePurgeWatch or SynologyPurgeWatch (this one would also require the modification of icons)
 
 - Call the SynologyAPI&#39;s  run method from the Lib.java constructor and save the Filenames in a LinkedList.
 
