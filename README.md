@@ -32,4 +32,3 @@ The intention of this software for me is solely to delete the Fortnite video fil
 
 - Write the constructor for Lib.java to connect to everything and finally make the entire program run.
 
-<hr>
