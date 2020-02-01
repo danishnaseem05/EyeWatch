@@ -3,3 +3,9 @@ The intention of this software for me is solely to delete the Fortnite video fil
 - For more info refer to the following:
 - `Documentation.docx` for the full visual documentation
 - `Documentation.md` for the markdown version of it, without the images.
+
+- To RUN the program click on the JAR file located in:
+- `Target/EyeWatch.jar`
+
+- For Testing refer to:
+- `src/Testing/Test.java`
