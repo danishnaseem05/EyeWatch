@@ -46,9 +46,9 @@ Scans the selected directory, and if it contains any files, add those files&#39;
 
 **-- TODO --**
 
-- Call the SynologyAPI&#39;s  run method from the Lib.java constructor and save the Filenames in a LinkedList.
+- Change the name of the entire program from EyeWatch to EyePurgeWatch
 
-- Make a method in Lib.java that deletes the file from [localDirPath + File.separator + filename], where filename is the argument.
+- Call the SynologyAPI&#39;s  run method from the Lib.java constructor and save the Filenames in a LinkedList.
 
 - Make a method in Lib.java that compares two Linked Lists (in this case they&#39;ll be the remote files linked list and local files linked). This will have O(n^2) complexity, as it will compare each item from each linked list, hence running in a nested loop. While running in a loop, it will call the delete file method for the item that is present in both the linked lists.
 
