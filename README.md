@@ -9,3 +9,22 @@ The intention of this software for me is solely to delete the Fortnite video fil
 
 - For TESTING refer to:
   - `src/test/java/Test/Testing.java`
+
+
+**-- TODO --**
+
+- Change the name of the entire program from EyeWatch to EyePurgeWatch
+
+- Call the SynologyAPI&#39;s  run method from the Lib.java constructor and save the Filenames in a LinkedList.
+
+- Make a method in Lib.java that compares two Linked Lists (in this case they&#39;ll be the remote files linked list and local files linked). This will have O(n^2) complexity, as it will compare each item from each linked list, hence running in a nested loop. While running in a loop, it will call the delete file method for the item that is present in both the linked lists.
+
+- Fix either GUI.java or OperatingSystem.java so that the database doesn&#39;t save setting until the monitoring has started correctly.
+
+- Fix the port number error in the SynologyAPI.java
+
+- Figure out the bug that is causing the GUI to not display the https port number error if the typed https port number is not an integer.
+
+- Make the WatchLocalDirectoryStateThread class in OperatingSystem.java more efficient so it doesn&#39;t take up the CPU when running in Idle. Create idle method to achieve this.
+
+- Write the constructor for Lib.java to connect to everything and finally make the entire program run.

@@ -44,24 +44,6 @@ Scans the selected directory, and if it contains any files, add those files&#39;
 
 - Only HTTPS port number will be accepted.
 
-**-- TODO --**
-
-- Change the name of the entire program from EyeWatch to EyePurgeWatch
-
-- Call the SynologyAPI&#39;s  run method from the Lib.java constructor and save the Filenames in a LinkedList.
-
-- Make a method in Lib.java that compares two Linked Lists (in this case they&#39;ll be the remote files linked list and local files linked). This will have O(n^2) complexity, as it will compare each item from each linked list, hence running in a nested loop. While running in a loop, it will call the delete file method for the item that is present in both the linked lists.
-
-- Fix either GUI.java or OperatingSystem.java so that the database doesn&#39;t save setting until the monitoring has started correctly.
-
-- Fix the port number error in the SynologyAPI.java
-
-- Figure out the bug that is causing the GUI to not display the https port number error if the typed https port number is not an integer.
-
-- Make the WatchLocalDirectoryStateThread class in OperatingSystem.java more efficient so it doesn&#39;t take up the CPU when running in Idle. Create idle method to achieve this.
-
-- Write the constructor for Lib.java to connect to everything and finally make the entire program run.
-
 **-- HOW THE PROGRAM RUNS --**
 
 - User clicks on program icon and the program starts launching. It will look for the user settings from an already created Database, or .csv file (not sure what to use yet). If none is present, then a new one will be created and written with the variable names as keys and empty strings as values. Then the GUI will load up (**\*\*refer to GUI section under CLASSES for more details\*\*)** , and by default will already have the information entered from the Database or .csv file (which right now is just empty strings, so GUI TextFields would be empty).
