@@ -20,7 +20,7 @@ The intention of this software for me is solely to delete the Fortnite video fil
 
 - Call the SynologyAPI&#39;s  run method from the Lib.java constructor and save the Filenames in a LinkedList.
 
-- Make a method in Lib.java that compares two Linked Lists (in this case they&#39;ll be the remote files linked list and local files linked). This will have O(n^2) complexity, as it will compare each item from each linked list, hence running in a nested loop. While running in a loop, it will call the delete file method for the item that is present in both the linked lists.
+- Make a method in Lib.java that compares two Linked Lists (in this case they&#39;ll be the remote files linked list and local files linked). This will have O(n^2) complexity, as it will compare each item from each linked list, hence running in a nested loop. While running in a loop, it will append each item that is present in both the linked lists to a linked list, which is going to be returned at the end of the function call. That list will later be passed on to the delete method to delete those files.
 
 - Fix either GUI.java or OperatingSystem.java so that the database doesn&#39;t save setting until the monitoring has started correctly.
 
