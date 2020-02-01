@@ -85,16 +85,18 @@ public class OperatingSystem {
     }
 
 
-    public static class WatchLocalDirectoryStateThread extends Thread {
+    public static class WatchLocalDirectoryStateThread extends Thread{
         GUI gui;
         String localDirPath;
 
         //running OperatingSystem class's watchLocalDirectoryState method in a new Thread
-        public WatchLocalDirectoryStateThread(GUI gui, String localDirPath){
+        public WatchLocalDirectoryStateThread(GUI gui, String localDirPath) {
             this.gui = gui;
             this.localDirPath = localDirPath;
+
         }
-        public void run(){
+
+        public void run() {
             try {
                 watchLocalDirectoryState(localDirPath);
             } catch (IOException ex) {
