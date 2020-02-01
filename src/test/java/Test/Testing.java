@@ -58,7 +58,7 @@ class Testing {
 
     void synologyAPITest() throws IOException, JSONException {
         SynologyAPI cloud = new SynologyAPI("testHost123.synology.me", "5001");
-        //System.out.println(cloud.run("danishnaseem05", "DanNass6", "home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite"));
+        //System.out.println(cloud.run("testHost123", "testing124", "home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite"));
         System.out.println(cloud.run("testHost123", "testing124", "home/Drive/Videos/Other/NVIDIA/GeForce NOW/Fortnite", "123456"));
     }
 
