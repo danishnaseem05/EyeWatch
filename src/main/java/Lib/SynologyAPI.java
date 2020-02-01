@@ -249,7 +249,7 @@ public class SynologyAPI {
         }
     }
 
-
+    // return remote directory's filenames
     private LinkedList runHelper(JSONObject authentication, String remotePath) throws JSONException, IOException {
         Boolean step2Success = authentication.getBoolean("success");
 

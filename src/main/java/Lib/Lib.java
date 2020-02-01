@@ -4,6 +4,7 @@ package Lib;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedList;
 
 
 public class Lib {
@@ -37,6 +38,15 @@ public class Lib {
         // collectDatabaseVars method, which collects the initialized the variables collected from the database, which
         // were collected from the GUI
         cloudDrive = new SynologyAPI(hostnameOrIP, portNumber);
+    }
+
+
+    public static LinkedList collectLocalDirFilenames(String filePath){
+        LinkedList<String> filenames = new LinkedList<>();
+
+
+
+        return filenames;
     }
 
 

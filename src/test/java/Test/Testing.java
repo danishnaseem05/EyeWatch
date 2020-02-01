@@ -7,9 +7,12 @@ import org.json.JSONException;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 
 import Lib.OperatingSystem.*;
+
+import static Lib.Lib.collectLocalDirFilenames;
 
 
 class Testing {
@@ -25,6 +28,7 @@ class Testing {
         //Lib lib = testing.libTest();
         //GUI gui = testing.guiTest(lib);
         //testing.operatingSystemTest(gui);
+        testing.libStaticTests();
 
     }
 
@@ -98,6 +102,15 @@ class Testing {
         lib.updateGUIFromDatabase();
 
         return lib;
+    }
+
+
+    // the methods being tested in this method have only been turned static during the testing period, and
+    // will be returned to being non-static after their testing is done. To test them here again, change them
+    // again to being static and then back to non-static after testing.
+    void libStaticTests(){
+        LinkedList<String> localFilenames = Lib.collectLocalDirFilenames("./TEST/.EyeWatch");
+        System.out.println(localFilenames);
     }
 
 }
