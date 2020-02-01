@@ -30,5 +30,3 @@ The intention of this software for me is solely to delete the Fortnite video fil
 
 - Make the WatchLocalDirectoryStateThread class in OperatingSystem.java more efficient so it doesn&#39;t take up the CPU when running in Idle. Create idle method to achieve this.
 
-- Write the constructor for Lib.java to connect to everything and finally make the entire program run.
-
