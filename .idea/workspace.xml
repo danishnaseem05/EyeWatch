@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="EyeWatch:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="22c9b362-46de-4fc1-87c3-76d3d521060e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -532,7 +537,7 @@
       <workItem from="1580093662666" duration="7659000" />
       <workItem from="1580106499254" duration="5191000" />
       <workItem from="1580157310833" duration="75625000" />
-      <workItem from="1580539350770" duration="2417000" />
+      <workItem from="1580539350770" duration="3201000" />
     </task>
     <servers />
   </component>
