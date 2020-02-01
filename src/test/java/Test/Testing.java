@@ -110,7 +110,7 @@ class Testing {
     // again to being static and then back to non-static after testing.
     void libStaticTests(){
         String dirPath = "./TEST/.EyeWatch";
-        LinkedList<String> localFilenames = Lib.collectLocalDirFilenames(dirPath);
+        LinkedList localFilenames = collectLocalDirFilenames(dirPath);
         System.out.println("FILES TO DELETE: " + localFilenames);
 
         Lib.deleteFiles(dirPath, localFilenames);
