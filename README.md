@@ -7,5 +7,5 @@ The intention of this software for me is solely to delete the Fortnite video fil
 - To RUN the program click on the JAR file located in:
   - `Target/EyeWatch.jar`
 
-- For Testing refer to:
+- For TESTING refer to:
   - `src/test/java/Test/Testing.java`
