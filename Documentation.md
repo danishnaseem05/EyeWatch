@@ -22,7 +22,7 @@
 
 **Copyright:** 2020 © Danish Naseem
 
-**License:** MIT
+**License:** GNU General Public License v3.0
 
 **-- INSTRUCTIONS --**
 
