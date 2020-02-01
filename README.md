@@ -4,7 +4,7 @@ The intention of this software for me is solely to delete the Fortnite video fil
   - `Documentation.docx` for the full visual documentation
   - `Documentation.md` for the markdown version of it, without the images.
 
-- To RUN the program refer to the JAR file located in:
+- To RUN the program refer to the JAR file:
   - `Target/EyeWatch.jar`
 
 - For TESTING refer to:
