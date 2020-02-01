@@ -109,8 +109,11 @@ class Testing {
     // will be returned to being non-static after their testing is done. To test them here again, change them
     // again to being static and then back to non-static after testing.
     void libStaticTests(){
-        LinkedList<String> localFilenames = Lib.collectLocalDirFilenames("./TEST/.EyeWatch");
-        System.out.println(localFilenames);
+        String dirPath = "./TEST/.EyeWatch";
+        LinkedList<String> localFilenames = Lib.collectLocalDirFilenames(dirPath);
+        System.out.println("FILES TO DELETE: " + localFilenames);
+
+        Lib.deleteFiles(dirPath, localFilenames);
     }
 
 }

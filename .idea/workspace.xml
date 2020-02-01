@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22c9b362-46de-4fc1-87c3-76d3d521060e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation.md" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Lib/Lib.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lib/Lib.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lib/SynologyAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lib/SynologyAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Test/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test/Testing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EyeWatch.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/EyeWatch.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lib/Lib.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lib/Lib.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Test/Testing.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Test/Testing.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -413,7 +418,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JAR Application.EyeWatch">
+  <component name="RunManager" selected="Application.Testing (1)">
     <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lib.GUI" />
       <module name="EyeWatch" />
@@ -453,12 +458,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SynologyAPI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lib.SynologyAPI" />
+    <configuration name="Testing (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test.Testing" />
       <module name="EyeWatch" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Lib.*" />
+          <option name="PATTERN" value="Test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -489,17 +494,17 @@
       <item itemvalue="Application.GUI" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.OperatingSystem" />
-      <item itemvalue="Application.SynologyAPI" />
       <item itemvalue="Application.Testing" />
       <item itemvalue="JAR Application.EyeWatch" />
+      <item itemvalue="Application.Testing (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Testing (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Testing" />
         <item itemvalue="Application.GUI" />
         <item itemvalue="Application.OperatingSystem" />
-        <item itemvalue="Application.SynologyAPI" />
       </list>
     </recent_temporary>
   </component>
@@ -536,7 +541,7 @@
       <workItem from="1580093662666" duration="7659000" />
       <workItem from="1580106499254" duration="5191000" />
       <workItem from="1580157310833" duration="75625000" />
-      <workItem from="1580539350770" duration="614000" />
+      <workItem from="1580539350770" duration="2152000" />
     </task>
     <servers />
   </component>

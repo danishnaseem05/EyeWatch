@@ -50,8 +50,6 @@ Scans the selected directory, and if it contains any files, add those files&#39;
 
 - Make a method in Lib.java that deletes the file from [localDirPath + File.separator + filename], where filename is the argument.
 
-- Make a method in Lib.java that collects all the local directory filenames in a LinkedList.
-
 - Make a method in Lib.java that compares two Linked Lists (in this case they&#39;ll be the remote files linked list and local files linked). This will have O(n^2) complexity, as it will compare each item from each linked list, hence running in a nested loop. While running in a loop, it will call the delete file method for the item that is present in both the linked lists.
 
 - Fix either GUI.java or OperatingSystem.java so that the database doesn&#39;t save setting until the monitoring has started correctly.

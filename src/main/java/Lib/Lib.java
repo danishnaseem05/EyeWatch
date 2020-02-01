@@ -44,9 +44,26 @@ public class Lib {
     public static LinkedList collectLocalDirFilenames(String filePath){
         LinkedList<String> filenames = new LinkedList<>();
 
+        File dir = new File(filePath);
+        File[] listOfFiles = dir.listFiles();
 
+        for(int i=0; i<listOfFiles.length; i++){
+            if(listOfFiles[i].isFile()) {
+                filenames.add(listOfFiles[i].getName());
+            }
+        }
 
         return filenames;
+    }
+
+
+    // takes in a list of local filenames to delete from the directory path
+    public static void deleteFiles(String dirPath, LinkedList<String> filenamesToDelete){
+        for(String filename: filenamesToDelete){
+            String filepath = dirPath + File.separator + filename;
+            File file = new File(filepath);
+            file.delete();
+        }
     }
 
 
