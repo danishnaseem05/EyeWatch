@@ -239,6 +239,8 @@ public class GUI extends JFrame {
 
                 // monitoring local directory in a new thread
                 WatchLocalDirectoryStateThread watchLocalDirThread = new WatchLocalDirectoryStateThread(this, getLocalDirPath());
+                watchLocalDirThread.setDaemon(true);
+                watchLocalDirThread.setPriority(Thread.MIN_PRIORITY);
                 watchLocalDirThread.start();
 
                 lib.writeToDatabase(getLocalDirPath(), getHostname(), getPortNumber(), getUsername(), getPassword().toString(), getRemoteDirPath(), otp_code, getRunOnStartupCheckbox().toString());
