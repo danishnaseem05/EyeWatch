@@ -139,6 +139,7 @@ public class OperatingSystem {
                     // and keep calling itself (the same Lib.java method) after sleep(10 minutes).
 
                 });
+                watchKey.reset();
             }
         }
 
