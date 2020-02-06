@@ -10,8 +10,10 @@
       <change beforePath="$PROJECT_DIR$/.EyeWatch/UserSetting.csv" beforeDir="false" afterPath="$PROJECT_DIR$/.EyeWatch/UserSetting.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Lib/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lib/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lib/Lib.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lib/Lib.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/EyeWatch.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/EyeWatch.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Lib/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lib/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lib/Lib.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lib/Lib.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -543,7 +545,7 @@
       <workItem from="1580093662666" duration="7659000" />
       <workItem from="1580106499254" duration="5191000" />
       <workItem from="1580157310833" duration="75625000" />
-      <workItem from="1580539350770" duration="12841000" />
+      <workItem from="1580539350770" duration="13961000" />
     </task>
     <servers />
   </component>
@@ -562,5 +564,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Lib/Lib.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
