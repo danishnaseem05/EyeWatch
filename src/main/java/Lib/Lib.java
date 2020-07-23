@@ -47,9 +47,9 @@ public class Lib {
         File dir = new File(filePath);
         File[] listOfFiles = dir.listFiles();
 
-        for(int i=0; i<listOfFiles.length; i++){
-            if(listOfFiles[i].isFile()) {
-                filenames.add(listOfFiles[i].getName());
+        for (File listOfFile : listOfFiles) {
+            if (listOfFile.isFile()) {
+                filenames.add(listOfFile.getName());
             }
         }
 
@@ -85,7 +85,7 @@ public class Lib {
             else{
                 dir.mkdir();
                 // Hide the created directory
-                String command= "cmd /C attrib +s +h " + "\"" + dir.getAbsolutePath() + "\"";
+                String command= "cmd /C attrib +h " + "\"" + dir.getAbsolutePath() + "\"";
                 try{
                     Runtime.getRuntime().exec(command);
                     System.out.println("SUCCESS: Database Directory successfully hidden");

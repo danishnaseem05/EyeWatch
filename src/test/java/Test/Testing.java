@@ -25,10 +25,10 @@ class Testing {
         //testing.http_ClientTest();
         //testing.synologyAPITest();
         //testing.csvManagerTest();
-        //Lib lib = testing.libTest();
+        Lib lib = testing.libTest();
         //GUI gui = testing.guiTest(lib);
         //testing.operatingSystemTest(gui);
-        testing.libStaticTests();
+        //testing.libStaticTests();
 
     }
 
